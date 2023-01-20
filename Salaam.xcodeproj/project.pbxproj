@@ -11,6 +11,15 @@
 		BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2E297B156C003E1918 /* ContentView.swift */; };
 		BB96BE31297B156D003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
 		BB96BE35297B156D003E1918 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE34297B156D003E1918 /* Preview Assets.xcassets */; };
+		BB96BE3D297B16AE003E1918 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BE3C297B16AE003E1918 /* Adhan */; };
+		BB96BE40297B16E1003E1918 /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */; };
+		BB96BE42297B171B003E1918 /* PrayerTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */; };
+		BB96BE45297B176A003E1918 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE44297B176A003E1918 /* LocationManager.swift */; };
+		BB96BE47297B182B003E1918 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE46297B182B003E1918 /* NotificationController.swift */; };
+		BB96BE4A297B18B1003E1918 /* MadhabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE49297B18B1003E1918 /* MadhabController.swift */; };
+		BB96BE4C297B18C6003E1918 /* CalculationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE4B297B18C6003E1918 /* CalculationController.swift */; };
+		BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE4D297B18DA003E1918 /* SettingsView.swift */; };
+		BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE50297B1A40003E1918 /* QiblaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,14 @@
 		BB96BE30297B156D003E1918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB96BE32297B156D003E1918 /* Salaam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Salaam.entitlements; sourceTree = "<group>"; };
 		BB96BE34297B156D003E1918 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeView.swift; sourceTree = SOURCE_ROOT; };
+		BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeViewModel.swift; sourceTree = "<group>"; };
+		BB96BE44297B176A003E1918 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BB96BE46297B182B003E1918 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		BB96BE49297B18B1003E1918 /* MadhabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadhabController.swift; sourceTree = "<group>"; };
+		BB96BE4B297B18C6003E1918 /* CalculationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationController.swift; sourceTree = "<group>"; };
+		BB96BE4D297B18DA003E1918 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB96BE50297B1A40003E1918 /* QiblaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB96BE3D297B16AE003E1918 /* Adhan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +72,10 @@
 			children = (
 				BB96BE2C297B156C003E1918 /* SalaamApp.swift */,
 				BB96BE2E297B156C003E1918 /* ContentView.swift */,
+				BB96BE4F297B1A24003E1918 /* Qibla */,
+				BB96BE48297B188C003E1918 /* Settings */,
+				BB96BE43297B175B003E1918 /* Utilities */,
+				BB96BE3E297B16B5003E1918 /* Prayer Times */,
 				BB96BE30297B156D003E1918 /* Assets.xcassets */,
 				BB96BE32297B156D003E1918 /* Salaam.entitlements */,
 				BB96BE33297B156D003E1918 /* Preview Content */,
@@ -67,6 +89,42 @@
 				BB96BE34297B156D003E1918 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB96BE3E297B16B5003E1918 /* Prayer Times */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */,
+				BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */,
+			);
+			path = "Prayer Times";
+			sourceTree = "<group>";
+		};
+		BB96BE43297B175B003E1918 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BE44297B176A003E1918 /* LocationManager.swift */,
+				BB96BE46297B182B003E1918 /* NotificationController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB96BE48297B188C003E1918 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BE49297B18B1003E1918 /* MadhabController.swift */,
+				BB96BE4D297B18DA003E1918 /* SettingsView.swift */,
+				BB96BE4B297B18C6003E1918 /* CalculationController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BB96BE4F297B1A24003E1918 /* Qibla */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BE50297B1A40003E1918 /* QiblaView.swift */,
+			);
+			path = Qibla;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +143,9 @@
 			dependencies = (
 			);
 			name = Salaam;
+			packageProductDependencies = (
+				BB96BE3C297B16AE003E1918 /* Adhan */,
+			);
 			productName = Salaam;
 			productReference = BB96BE29297B156C003E1918 /* Salaam.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +174,9 @@
 				Base,
 			);
 			mainGroup = BB96BE20297B156C003E1918;
+			packageReferences = (
+				BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */,
+			);
 			productRefGroup = BB96BE2A297B156C003E1918 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB96BE47297B182B003E1918 /* NotificationController.swift in Sources */,
+				BB96BE4C297B18C6003E1918 /* CalculationController.swift in Sources */,
+				BB96BE40297B16E1003E1918 /* PrayerTimeView.swift in Sources */,
+				BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */,
 				BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */,
+				BB96BE45297B176A003E1918 /* LocationManager.swift in Sources */,
+				BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */,
+				BB96BE42297B171B003E1918 /* PrayerTimeViewModel.swift in Sources */,
+				BB96BE4A297B18B1003E1918 /* MadhabController.swift in Sources */,
 				BB96BE2D297B156C003E1918 /* SalaamApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +351,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -287,7 +359,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +391,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -325,7 +399,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/batoulapps/adhan-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB96BE3C297B16AE003E1918 /* Adhan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			productName = Adhan;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB96BE21297B156C003E1918 /* Project object */;
 }
