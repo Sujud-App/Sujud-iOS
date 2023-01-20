@@ -68,14 +68,14 @@ struct PrayerWidgetEntryView : View {
     @State var next : String
     @State var method: CalculationMethod = .northAmerica {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Salaam!")!.setValue(method.rawValue, forKey: "method")
+            UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.setValue(method.rawValue, forKey: "method")
             getPrayerTime()
         }
     }
    
     @State var mashab: Madhab = .hanafi {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Salaam")!.setValue(mashab.rawValue, forKey: "mashab")
+            UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.setValue(mashab.rawValue, forKey: "mashab")
             getPrayerTime()
         }
     }
@@ -99,11 +99,11 @@ struct PrayerWidgetEntryView : View {
         self.current = current
         self.next = next
         
-               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "method") {
+               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "method") {
                 self.method = CalculationMethod(rawValue: rawValue) ?? .northAmerica
                }
         
-        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.value(forKey: "mashab") {
+        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.value(forKey: "mashab") {
             self.mashab = Madhab(rawValue: mashab as! Int) ?? .hanafi
         }
                                       

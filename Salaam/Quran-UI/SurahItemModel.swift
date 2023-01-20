@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 struct SurahItem: Codable, Hashable, Identifiable {
     let id: Int
@@ -25,13 +25,12 @@ struct SurahItem: Codable, Hashable, Identifiable {
 }
 
 func loadSurahs() -> [SurahItem] {
-    let decoder = JSONDecoder()
     if let url = Bundle.main.url(forResource: "surah-details", withExtension: "json") {
         if let jsonData = try? Data(contentsOf: url) {
-            if let surahs = try? decoder.decode([SurahItem].self, from: jsonData) {
+            if let surahs = try? JSONDecoder().decode([SurahItem].self, from: jsonData) {
                 return surahs
             } else {
-                print("error while decoding json")
+                print("error while decoding surah details. This is annoying me a lot.")
             }
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreLocation
 import Adhan
+import WidgetKit
 
 
 struct PrayerView: View{
@@ -181,6 +182,7 @@ struct PrayerView: View{
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                         .onAppear {
                             model.getPrayerTime(CLLocationManager(), didUpdateHeading: CLHeading.init())
+                            WidgetCenter.shared.reloadAllTimelines()
                         }
                         HStack{
                             Text("Sunrise")
@@ -258,4 +260,18 @@ struct CloudShape: Shape {
         
     }
     
+}
+
+extension View {
+    /// Sets the text color for a navigation bar title.
+    /// - Parameter color: Color the title should be
+    ///
+    /// Supports both regular and large titles.
+    func navigationBarTitleTextColor(_ color: Color) -> some View {
+        let uiColor = UIColor(color)
+        UITableView.appearance().separatorStyle = .none
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: uiColor ]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: uiColor ]
+        return self
+    }
 }

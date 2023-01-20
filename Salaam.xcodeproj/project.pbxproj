@@ -154,9 +154,9 @@
 		BB96C165297B274F003E1918 /* surah-77.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E9297B274E003E1918 /* surah-77.json */; };
 		BB96C166297B274F003E1918 /* surah-20.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EA297B274E003E1918 /* surah-20.json */; };
 		BB96C167297B274F003E1918 /* surah-9.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EB297B274E003E1918 /* surah-9.json */; };
-		BB96C168297B274F003E1918 /* surah-details.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EC297B274E003E1918 /* surah-details.json */; };
 		BB96C169297B274F003E1918 /* PlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */; };
 		BB96C16A297B274F003E1918 /* QuranUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0EE297B274E003E1918 /* QuranUI.swift */; };
+		BB96C286297B2D4F003E1918 /* surah-details.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C285297B2D4E003E1918 /* surah-details.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,9 +326,12 @@
 		BB96C0E9297B274E003E1918 /* surah-77.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-77.json"; sourceTree = "<group>"; };
 		BB96C0EA297B274E003E1918 /* surah-20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-20.json"; sourceTree = "<group>"; };
 		BB96C0EB297B274E003E1918 /* surah-9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-9.json"; sourceTree = "<group>"; };
-		BB96C0EC297B274E003E1918 /* surah-details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-details.json"; sourceTree = "<group>"; };
 		BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProtocol.swift; sourceTree = "<group>"; };
 		BB96C0EE297B274E003E1918 /* QuranUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuranUI.swift; sourceTree = "<group>"; };
+		BB96C283297B2C48003E1918 /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
+		BB96C284297B2CAF003E1918 /* surahsss.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = surahsss.json; sourceTree = "<group>"; };
+		BB96C285297B2D4E003E1918 /* surah-details.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "surah-details.json"; sourceTree = "<group>"; };
+		BB96C287297B2EEF003E1918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +360,7 @@
 		BB96BE20297B156C003E1918 = {
 			isa = PBXGroup;
 			children = (
+				BB96C283297B2C48003E1918 /* WidgetExtension.entitlements */,
 				BB96BE2B297B156C003E1918 /* Salaam */,
 				BB96BF5A297B233D003E1918 /* Widget */,
 				BB96BF55297B233D003E1918 /* Frameworks */,
@@ -376,6 +380,7 @@
 		BB96BE2B297B156C003E1918 /* Salaam */ = {
 			isa = PBXGroup;
 			children = (
+				BB96C287297B2EEF003E1918 /* Info.plist */,
 				BB96BE2C297B156C003E1918 /* SalaamApp.swift */,
 				BB96BE2E297B156C003E1918 /* ContentView.swift */,
 				BB96C070297B274E003E1918 /* Quran-UI */,
@@ -474,8 +479,8 @@
 		BB96C078297B274E003E1918 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB96C285297B2D4E003E1918 /* surah-details.json */,
 				BB96C079297B274E003E1918 /* surahas */,
-				BB96C0EC297B274E003E1918 /* surah-details.json */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 		BB96C079297B274E003E1918 /* surahas */ = {
 			isa = PBXGroup;
 			children = (
+				BB96C284297B2CAF003E1918 /* surahsss.json */,
 				BB96C07A297B274E003E1918 /* surah-35.json */,
 				BB96C07B297B274E003E1918 /* surah-105.json */,
 				BB96C07C297B274E003E1918 /* surah-62.json */,
@@ -693,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB96C286297B2D4F003E1918 /* surah-details.json in Resources */,
 				BB96C14E297B274F003E1918 /* surah-99.json in Resources */,
 				BB96C147297B274F003E1918 /* surah-92.json in Resources */,
 				BB96C117297B274F003E1918 /* surah-34.json in Resources */,
@@ -711,7 +718,6 @@
 				BB96C161297B274F003E1918 /* surah-106.json in Resources */,
 				BB96C0F9297B274E003E1918 /* surah-113.json in Resources */,
 				BB96C14F297B274F003E1918 /* surah-76.json in Resources */,
-				BB96C168297B274F003E1918 /* surah-details.json in Resources */,
 				BB96C153297B274F003E1918 /* surah-37.json in Resources */,
 				BB96C15F297B274F003E1918 /* surah-41.json in Resources */,
 				BB96C156297B274F003E1918 /* surah-4.json in Resources */,
@@ -998,6 +1004,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Salaam/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1040,6 +1047,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Salaam/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1073,6 +1081,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F5SNH459WD;
@@ -1102,6 +1111,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F5SNH459WD;

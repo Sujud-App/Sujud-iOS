@@ -12,24 +12,24 @@ import CoreLocation
 
 class PrayerTimeViewModel: ObservableObject {
 
-    @Published var sunrise : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "SUNRISE") ?? ""
-    @Published var fajr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "FAJR") ?? ""
+    @Published var sunrise : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "SUNRISE") ?? ""
+    @Published var fajr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "FAJR") ?? ""
     @Published var notifajr : Date
-    @Published var zuhr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "ZUHR") ?? ""
+    @Published var zuhr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "ZUHR") ?? ""
     @Published var notidhuhr : Date
-    @Published var asr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "ASR") ?? ""
+    @Published var asr : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "ASR") ?? ""
     @Published var notiasr : Date
-    @Published var maghrib : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "MAGHRIB") ?? ""
+    @Published var maghrib : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "MAGHRIB") ?? ""
     @Published var notimaghrib : Date
-    @Published var isha : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "ISHA") ?? ""
+    @Published var isha : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "ISHA") ?? ""
     @Published var notiisha : Date
     @Published var current : String
-    @Published var next : String = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.string(forKey: "NEXT") ?? ""
+    @Published var next : String = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.string(forKey: "NEXT") ?? ""
     @Published var lm = LocationManager()
   
     @Published var method: CalculationMethod = .northAmerica {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Salaam")?.setValue(method.rawValue, forKey: "method")
+            UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")?.setValue(method.rawValue, forKey: "method")
             getPrayerTime(locationManager, didUpdateHeading: CLHeading.init())
             objectWillChange.send()
         }
@@ -37,7 +37,7 @@ class PrayerTimeViewModel: ObservableObject {
    
     @Published var mashab: Madhab = .hanafi {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Salaam")!.setValue(mashab.rawValue, forKey: "mashab")
+            UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.setValue(mashab.rawValue, forKey: "mashab")
             getPrayerTime(locationManager, didUpdateHeading: CLHeading.init())
             objectWillChange.send()
         }
@@ -49,7 +49,14 @@ class PrayerTimeViewModel: ObservableObject {
     
     init(sunrise: String, fajr : String, notifajr : Date, zuhr : String, notidhuhr : Date, asr : String, notiasr : Date, maghrib : String, notimaghrib : Date, isha : String, notiisha : Date, current : String, next : String) {
         
-        
+        UITabBar.appearance().backgroundColor = .clear
+       UITableView.appearance().backgroundColor = UIColor.clear
+       UITableViewCell.appearance().backgroundColor = .clear
+       let transparentAppearence = UITabBarAppearance()
+       transparentAppearence.configureWithTransparentBackground() // 🔑
+       UITabBar.appearance().standardAppearance = transparentAppearence
+       UITabBar.appearance().unselectedItemTintColor = UIColor.init(named: "primary")
+       
 
         self.sunrise = sunrise
         self.fajr = fajr
@@ -65,11 +72,11 @@ class PrayerTimeViewModel: ObservableObject {
         self.current = current
         self.next = next
         
-               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Salaam")?.string(forKey: "method") {
+               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")?.string(forKey: "method") {
                 self.method = CalculationMethod(rawValue: rawValue) ?? .northAmerica
                }
         
-        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Salaam")!.value(forKey: "mashab") {
+        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.value(forKey: "mashab") {
             self.mashab = Madhab(rawValue: mashab  as! Int) ?? .hanafi
         }
         self.locationManager = CLLocationManager()
@@ -77,12 +84,12 @@ class PrayerTimeViewModel: ObservableObject {
         self.setup()
                                       
         getPrayerTime(locationManager, didUpdateHeading: CLHeading.init())
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(fajr, forKey: "FAJR")
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(zuhr, forKey: "ZUHR")
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(asr, forKey: "ASR")
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(maghrib, forKey: "MAGHRIB")
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(isha, forKey: "ISHA")
-        UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(next, forKey: "NEXT")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(fajr, forKey: "FAJR")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(zuhr, forKey: "ZUHR")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(asr, forKey: "ASR")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(maghrib, forKey: "MAGHRIB")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(isha, forKey: "ISHA")
+        UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(next, forKey: "NEXT")
     }
       
     private let locationManager: CLLocationManager
@@ -142,12 +149,12 @@ class PrayerTimeViewModel: ObservableObject {
             }
             
         }
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(fajr, forKey: "FAJR")
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(zuhr, forKey: "ZUHR")
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(asr, forKey: "ASR")
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(maghrib, forKey: "MAGHRIB")
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(isha, forKey: "ISHA")
-         UserDefaults(suiteName: "group.babyyoda777.Salaam")!.set(next, forKey: "NEXT")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(fajr, forKey: "FAJR")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(zuhr, forKey: "ZUHR")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(asr, forKey: "ASR")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(maghrib, forKey: "MAGHRIB")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(isha, forKey: "ISHA")
+         UserDefaults(suiteName: "group.babyyoda777.Salaam-iOS")!.set(next, forKey: "NEXT")
     }
     
             
