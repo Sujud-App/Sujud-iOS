@@ -20,7 +20,168 @@
 		BB96BE4C297B18C6003E1918 /* CalculationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE4B297B18C6003E1918 /* CalculationController.swift */; };
 		BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE4D297B18DA003E1918 /* SettingsView.swift */; };
 		BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE50297B1A40003E1918 /* QiblaView.swift */; };
+		BB96BE54297B1AC8003E1918 /* SwiftAudioEx in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BE53297B1AC8003E1918 /* SwiftAudioEx */; };
+		BB96BF57297B233D003E1918 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB96BF56297B233D003E1918 /* WidgetKit.framework */; };
+		BB96BF59297B233D003E1918 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB96BF58297B233D003E1918 /* SwiftUI.framework */; };
+		BB96BF60297B233D003E1918 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF5F297B233D003E1918 /* Widget.swift */; };
+		BB96BF63297B233F003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BF62297B233F003E1918 /* Assets.xcassets */; };
+		BB96BF65297B233F003E1918 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF61297B233D003E1918 /* Widget.intentdefinition */; };
+		BB96BF66297B233F003E1918 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF61297B233D003E1918 /* Widget.intentdefinition */; };
+		BB96BF69297B233F003E1918 /* WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB96BF54297B233D003E1918 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BB96BF6F297B23A3003E1918 /* PrayerTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */; };
+		BB96BF70297B241E003E1918 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE44297B176A003E1918 /* LocationManager.swift */; };
+		BB96BF71297B2460003E1918 /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */; };
+		BB96BF72297B2479003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
+		BB96BF74297B2520003E1918 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BF73297B2520003E1918 /* Adhan */; };
+		BB96C0EF297B274E003E1918 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C071297B274E003E1918 /* AudioPlayer.swift */; };
+		BB96C0F0297B274E003E1918 /* SurahItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C072297B274E003E1918 /* SurahItemModel.swift */; };
+		BB96C0F1297B274E003E1918 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C073297B274E003E1918 /* FileManager.swift */; };
+		BB96C0F2297B274E003E1918 /* SurahDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C074297B274E003E1918 /* SurahDetailsView.swift */; };
+		BB96C0F3297B274E003E1918 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C075297B274E003E1918 /* Data+String.swift */; };
+		BB96C0F4297B274E003E1918 /* AyahItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C076297B274E003E1918 /* AyahItemModel.swift */; };
+		BB96C0F5297B274E003E1918 /* SurahDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C077297B274E003E1918 /* SurahDetailsViewModel.swift */; };
+		BB96C0F6297B274E003E1918 /* surah-35.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07A297B274E003E1918 /* surah-35.json */; };
+		BB96C0F7297B274E003E1918 /* surah-105.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07B297B274E003E1918 /* surah-105.json */; };
+		BB96C0F8297B274E003E1918 /* surah-62.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07C297B274E003E1918 /* surah-62.json */; };
+		BB96C0F9297B274E003E1918 /* surah-113.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07D297B274E003E1918 /* surah-113.json */; };
+		BB96C0FA297B274E003E1918 /* surah-74.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07E297B274E003E1918 /* surah-74.json */; };
+		BB96C0FB297B274E003E1918 /* surah-23.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C07F297B274E003E1918 /* surah-23.json */; };
+		BB96C0FC297B274E003E1918 /* surah-58.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C080297B274E003E1918 /* surah-58.json */; };
+		BB96C0FD297B274E003E1918 /* surah-19.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C081297B274E003E1918 /* surah-19.json */; };
+		BB96C0FE297B274E003E1918 /* surah-39.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C082297B274E003E1918 /* surah-39.json */; };
+		BB96C0FF297B274E003E1918 /* surah-109.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C083297B274E003E1918 /* surah-109.json */; };
+		BB96C100297B274E003E1918 /* surah-81.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C084297B274E003E1918 /* surah-81.json */; };
+		BB96C101297B274E003E1918 /* surah-78.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C085297B274E003E1918 /* surah-78.json */; };
+		BB96C102297B274E003E1918 /* surah-97.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C086297B274E003E1918 /* surah-97.json */; };
+		BB96C103297B274E003E1918 /* surah-54.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C087297B274E003E1918 /* surah-54.json */; };
+		BB96C104297B274E003E1918 /* surah-6.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C088297B274E003E1918 /* surah-6.json */; };
+		BB96C105297B274E003E1918 /* surah-15.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C089297B274E003E1918 /* surah-15.json */; };
+		BB96C106297B274F003E1918 /* surah-42.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08A297B274E003E1918 /* surah-42.json */; };
+		BB96C107297B274F003E1918 /* surah-43.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08B297B274E003E1918 /* surah-43.json */; };
+		BB96C108297B274F003E1918 /* surah-14.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08C297B274E003E1918 /* surah-14.json */; };
+		BB96C109297B274F003E1918 /* surah-7.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08D297B274E003E1918 /* surah-7.json */; };
+		BB96C10A297B274F003E1918 /* surah-55.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08E297B274E003E1918 /* surah-55.json */; };
+		BB96C10B297B274F003E1918 /* surah-79.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C08F297B274E003E1918 /* surah-79.json */; };
+		BB96C10C297B274F003E1918 /* surah-96.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C090297B274E003E1918 /* surah-96.json */; };
+		BB96C10D297B274F003E1918 /* surah-108.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C091297B274E003E1918 /* surah-108.json */; };
+		BB96C10E297B274F003E1918 /* surah-80.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C092297B274E003E1918 /* surah-80.json */; };
+		BB96C10F297B274F003E1918 /* surah-38.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C093297B274E003E1918 /* surah-38.json */; };
+		BB96C110297B274F003E1918 /* surah-18.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C094297B274E003E1918 /* surah-18.json */; };
+		BB96C111297B274F003E1918 /* surah-59.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C095297B274E003E1918 /* surah-59.json */; };
+		BB96C112297B274F003E1918 /* surah-22.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C096297B274E003E1918 /* surah-22.json */; };
+		BB96C113297B274F003E1918 /* surah-75.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C097297B274E003E1918 /* surah-75.json */; };
+		BB96C114297B274F003E1918 /* surah-112.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C098297B274E003E1918 /* surah-112.json */; };
+		BB96C115297B274F003E1918 /* surah-63.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C099297B274E003E1918 /* surah-63.json */; };
+		BB96C116297B274F003E1918 /* surah-104.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09A297B274E003E1918 /* surah-104.json */; };
+		BB96C117297B274F003E1918 /* surah-34.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09B297B274E003E1918 /* surah-34.json */; };
+		BB96C118297B274F003E1918 /* surah-68.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09C297B274E003E1918 /* surah-68.json */; };
+		BB96C119297B274F003E1918 /* surah-87.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09D297B274E003E1918 /* surah-87.json */; };
+		BB96C11A297B274F003E1918 /* surah-91.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09E297B274E003E1918 /* surah-91.json */; };
+		BB96C11B297B274F003E1918 /* surah-29.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C09F297B274E003E1918 /* surah-29.json */; };
+		BB96C11C297B274F003E1918 /* surah-52.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A0297B274E003E1918 /* surah-52.json */; };
+		BB96C11D297B274F003E1918 /* surah-13.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A1297B274E003E1918 /* surah-13.json */; };
+		BB96C11E297B274F003E1918 /* surah-44.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A2297B274E003E1918 /* surah-44.json */; };
+		BB96C11F297B274F003E1918 /* surah-33.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A3297B274E003E1918 /* surah-33.json */; };
+		BB96C120297B274F003E1918 /* surah-103.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A4297B274E003E1918 /* surah-103.json */; };
+		BB96C121297B274F003E1918 /* surah-64.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A5297B274E003E1918 /* surah-64.json */; };
+		BB96C122297B274F003E1918 /* surah-72.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A6297B274E003E1918 /* surah-72.json */; };
+		BB96C123297B274F003E1918 /* surah-25.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A7297B274E003E1918 /* surah-25.json */; };
+		BB96C124297B274F003E1918 /* surah-48.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A8297B274E003E1918 /* surah-48.json */; };
+		BB96C125297B274F003E1918 /* surah-49.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0A9297B274E003E1918 /* surah-49.json */; };
+		BB96C126297B274F003E1918 /* surah-24.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AA297B274E003E1918 /* surah-24.json */; };
+		BB96C127297B274F003E1918 /* surah-73.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AB297B274E003E1918 /* surah-73.json */; };
+		BB96C128297B274F003E1918 /* surah-114.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AC297B274E003E1918 /* surah-114.json */; };
+		BB96C129297B274F003E1918 /* surah-65.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AD297B274E003E1918 /* surah-65.json */; };
+		BB96C12A297B274F003E1918 /* surah-102.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AE297B274E003E1918 /* surah-102.json */; };
+		BB96C12B297B274F003E1918 /* surah-32.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0AF297B274E003E1918 /* surah-32.json */; };
+		BB96C12C297B274F003E1918 /* surah-45.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B0297B274E003E1918 /* surah-45.json */; };
+		BB96C12D297B274F003E1918 /* surah-12.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B1297B274E003E1918 /* surah-12.json */; };
+		BB96C12E297B274F003E1918 /* surah-1.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B2297B274E003E1918 /* surah-1.json */; };
+		BB96C12F297B274F003E1918 /* surah-53.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B3297B274E003E1918 /* surah-53.json */; };
+		BB96C130297B274F003E1918 /* surah-28.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B4297B274E003E1918 /* surah-28.json */; };
+		BB96C131297B274F003E1918 /* surah-90.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B5297B274E003E1918 /* surah-90.json */; };
+		BB96C132297B274F003E1918 /* surah-69.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B6297B274E003E1918 /* surah-69.json */; };
+		BB96C133297B274F003E1918 /* surah-86.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B7297B274E003E1918 /* surah-86.json */; };
+		BB96C134297B274F003E1918 /* surah-46.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B8297B274E003E1918 /* surah-46.json */; };
+		BB96C135297B274F003E1918 /* surah-11.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0B9297B274E003E1918 /* surah-11.json */; };
+		BB96C136297B274F003E1918 /* surah-2.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BA297B274E003E1918 /* surah-2.json */; };
+		BB96C137297B274F003E1918 /* surah-50.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BB297B274E003E1918 /* surah-50.json */; };
+		BB96C138297B274F003E1918 /* surah-93.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BC297B274E003E1918 /* surah-93.json */; };
+		BB96C139297B274F003E1918 /* surah-85.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BD297B274E003E1918 /* surah-85.json */; };
+		BB96C13A297B274F003E1918 /* surah-27.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BE297B274E003E1918 /* surah-27.json */; };
+		BB96C13B297B274F003E1918 /* surah-70.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0BF297B274E003E1918 /* surah-70.json */; };
+		BB96C13C297B274F003E1918 /* surah-89.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C0297B274E003E1918 /* surah-89.json */; };
+		BB96C13D297B274F003E1918 /* surah-66.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C1297B274E003E1918 /* surah-66.json */; };
+		BB96C13E297B274F003E1918 /* surah-101.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C2297B274E003E1918 /* surah-101.json */; };
+		BB96C13F297B274F003E1918 /* surah-31.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C3297B274E003E1918 /* surah-31.json */; };
+		BB96C140297B274F003E1918 /* surah-30.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C4297B274E003E1918 /* surah-30.json */; };
+		BB96C141297B274F003E1918 /* surah-88.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C5297B274E003E1918 /* surah-88.json */; };
+		BB96C142297B274F003E1918 /* surah-100.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C6297B274E003E1918 /* surah-100.json */; };
+		BB96C143297B274F003E1918 /* surah-67.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C7297B274E003E1918 /* surah-67.json */; };
+		BB96C144297B274F003E1918 /* surah-71.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C8297B274E003E1918 /* surah-71.json */; };
+		BB96C145297B274F003E1918 /* surah-26.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0C9297B274E003E1918 /* surah-26.json */; };
+		BB96C146297B274F003E1918 /* surah-84.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CA297B274E003E1918 /* surah-84.json */; };
+		BB96C147297B274F003E1918 /* surah-92.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CB297B274E003E1918 /* surah-92.json */; };
+		BB96C148297B274F003E1918 /* surah-51.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CC297B274E003E1918 /* surah-51.json */; };
+		BB96C149297B274F003E1918 /* surah-3.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CD297B274E003E1918 /* surah-3.json */; };
+		BB96C14A297B274F003E1918 /* surah-10.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CE297B274E003E1918 /* surah-10.json */; };
+		BB96C14B297B274F003E1918 /* surah-47.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0CF297B274E003E1918 /* surah-47.json */; };
+		BB96C14C297B274F003E1918 /* surah-8.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D0297B274E003E1918 /* surah-8.json */; };
+		BB96C14D297B274F003E1918 /* surah-21.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D1297B274E003E1918 /* surah-21.json */; };
+		BB96C14E297B274F003E1918 /* surah-99.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D2297B274E003E1918 /* surah-99.json */; };
+		BB96C14F297B274F003E1918 /* surah-76.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D3297B274E003E1918 /* surah-76.json */; };
+		BB96C150297B274F003E1918 /* surah-111.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D4297B274E003E1918 /* surah-111.json */; };
+		BB96C151297B274F003E1918 /* surah-60.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D5297B274E003E1918 /* surah-60.json */; };
+		BB96C152297B274F003E1918 /* surah-107.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D6297B274E003E1918 /* surah-107.json */; };
+		BB96C153297B274F003E1918 /* surah-37.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D7297B274E003E1918 /* surah-37.json */; };
+		BB96C154297B274F003E1918 /* surah-40.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D8297B274E003E1918 /* surah-40.json */; };
+		BB96C155297B274F003E1918 /* surah-17.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0D9297B274E003E1918 /* surah-17.json */; };
+		BB96C156297B274F003E1918 /* surah-4.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DA297B274E003E1918 /* surah-4.json */; };
+		BB96C157297B274F003E1918 /* surah-56.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DB297B274E003E1918 /* surah-56.json */; };
+		BB96C158297B274F003E1918 /* surah-95.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DC297B274E003E1918 /* surah-95.json */; };
+		BB96C159297B274F003E1918 /* surah-83.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DD297B274E003E1918 /* surah-83.json */; };
+		BB96C15A297B274F003E1918 /* surah-82.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DE297B274E003E1918 /* surah-82.json */; };
+		BB96C15B297B274F003E1918 /* surah-94.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0DF297B274E003E1918 /* surah-94.json */; };
+		BB96C15C297B274F003E1918 /* surah-57.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E0297B274E003E1918 /* surah-57.json */; };
+		BB96C15D297B274F003E1918 /* surah-5.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E1297B274E003E1918 /* surah-5.json */; };
+		BB96C15E297B274F003E1918 /* surah-16.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E2297B274E003E1918 /* surah-16.json */; };
+		BB96C15F297B274F003E1918 /* surah-41.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E3297B274E003E1918 /* surah-41.json */; };
+		BB96C160297B274F003E1918 /* surah-36.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E4297B274E003E1918 /* surah-36.json */; };
+		BB96C161297B274F003E1918 /* surah-106.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E5297B274E003E1918 /* surah-106.json */; };
+		BB96C162297B274F003E1918 /* surah-61.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E6297B274E003E1918 /* surah-61.json */; };
+		BB96C163297B274F003E1918 /* surah-98.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E7297B274E003E1918 /* surah-98.json */; };
+		BB96C164297B274F003E1918 /* surah-110.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E8297B274E003E1918 /* surah-110.json */; };
+		BB96C165297B274F003E1918 /* surah-77.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0E9297B274E003E1918 /* surah-77.json */; };
+		BB96C166297B274F003E1918 /* surah-20.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EA297B274E003E1918 /* surah-20.json */; };
+		BB96C167297B274F003E1918 /* surah-9.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EB297B274E003E1918 /* surah-9.json */; };
+		BB96C168297B274F003E1918 /* surah-details.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C0EC297B274E003E1918 /* surah-details.json */; };
+		BB96C169297B274F003E1918 /* PlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */; };
+		BB96C16A297B274F003E1918 /* QuranUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0EE297B274E003E1918 /* QuranUI.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB96BF67297B233F003E1918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB96BE21297B156C003E1918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB96BF53297B233D003E1918;
+			remoteInfo = WidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB96BF6D297B233F003E1918 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB96BF69297B233F003E1918 /* WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BB96BE29297B156C003E1918 /* Salaam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salaam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +198,137 @@
 		BB96BE4B297B18C6003E1918 /* CalculationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationController.swift; sourceTree = "<group>"; };
 		BB96BE4D297B18DA003E1918 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BB96BE50297B1A40003E1918 /* QiblaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaView.swift; sourceTree = "<group>"; };
+		BB96BF54297B233D003E1918 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB96BF56297B233D003E1918 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BB96BF58297B233D003E1918 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BB96BF5F297B233D003E1918 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
+		BB96BF61297B233D003E1918 /* Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widget.intentdefinition; sourceTree = "<group>"; };
+		BB96BF62297B233F003E1918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB96BF64297B233F003E1918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB96C071297B274E003E1918 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BB96C072297B274E003E1918 /* SurahItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurahItemModel.swift; sourceTree = "<group>"; };
+		BB96C073297B274E003E1918 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		BB96C074297B274E003E1918 /* SurahDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurahDetailsView.swift; sourceTree = "<group>"; };
+		BB96C075297B274E003E1918 /* Data+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
+		BB96C076297B274E003E1918 /* AyahItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AyahItemModel.swift; sourceTree = "<group>"; };
+		BB96C077297B274E003E1918 /* SurahDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurahDetailsViewModel.swift; sourceTree = "<group>"; };
+		BB96C07A297B274E003E1918 /* surah-35.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-35.json"; sourceTree = "<group>"; };
+		BB96C07B297B274E003E1918 /* surah-105.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-105.json"; sourceTree = "<group>"; };
+		BB96C07C297B274E003E1918 /* surah-62.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-62.json"; sourceTree = "<group>"; };
+		BB96C07D297B274E003E1918 /* surah-113.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-113.json"; sourceTree = "<group>"; };
+		BB96C07E297B274E003E1918 /* surah-74.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-74.json"; sourceTree = "<group>"; };
+		BB96C07F297B274E003E1918 /* surah-23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-23.json"; sourceTree = "<group>"; };
+		BB96C080297B274E003E1918 /* surah-58.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-58.json"; sourceTree = "<group>"; };
+		BB96C081297B274E003E1918 /* surah-19.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-19.json"; sourceTree = "<group>"; };
+		BB96C082297B274E003E1918 /* surah-39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-39.json"; sourceTree = "<group>"; };
+		BB96C083297B274E003E1918 /* surah-109.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-109.json"; sourceTree = "<group>"; };
+		BB96C084297B274E003E1918 /* surah-81.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-81.json"; sourceTree = "<group>"; };
+		BB96C085297B274E003E1918 /* surah-78.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-78.json"; sourceTree = "<group>"; };
+		BB96C086297B274E003E1918 /* surah-97.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-97.json"; sourceTree = "<group>"; };
+		BB96C087297B274E003E1918 /* surah-54.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-54.json"; sourceTree = "<group>"; };
+		BB96C088297B274E003E1918 /* surah-6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-6.json"; sourceTree = "<group>"; };
+		BB96C089297B274E003E1918 /* surah-15.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-15.json"; sourceTree = "<group>"; };
+		BB96C08A297B274E003E1918 /* surah-42.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-42.json"; sourceTree = "<group>"; };
+		BB96C08B297B274E003E1918 /* surah-43.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-43.json"; sourceTree = "<group>"; };
+		BB96C08C297B274E003E1918 /* surah-14.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-14.json"; sourceTree = "<group>"; };
+		BB96C08D297B274E003E1918 /* surah-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-7.json"; sourceTree = "<group>"; };
+		BB96C08E297B274E003E1918 /* surah-55.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-55.json"; sourceTree = "<group>"; };
+		BB96C08F297B274E003E1918 /* surah-79.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-79.json"; sourceTree = "<group>"; };
+		BB96C090297B274E003E1918 /* surah-96.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-96.json"; sourceTree = "<group>"; };
+		BB96C091297B274E003E1918 /* surah-108.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-108.json"; sourceTree = "<group>"; };
+		BB96C092297B274E003E1918 /* surah-80.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-80.json"; sourceTree = "<group>"; };
+		BB96C093297B274E003E1918 /* surah-38.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-38.json"; sourceTree = "<group>"; };
+		BB96C094297B274E003E1918 /* surah-18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-18.json"; sourceTree = "<group>"; };
+		BB96C095297B274E003E1918 /* surah-59.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-59.json"; sourceTree = "<group>"; };
+		BB96C096297B274E003E1918 /* surah-22.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-22.json"; sourceTree = "<group>"; };
+		BB96C097297B274E003E1918 /* surah-75.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-75.json"; sourceTree = "<group>"; };
+		BB96C098297B274E003E1918 /* surah-112.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-112.json"; sourceTree = "<group>"; };
+		BB96C099297B274E003E1918 /* surah-63.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-63.json"; sourceTree = "<group>"; };
+		BB96C09A297B274E003E1918 /* surah-104.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-104.json"; sourceTree = "<group>"; };
+		BB96C09B297B274E003E1918 /* surah-34.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-34.json"; sourceTree = "<group>"; };
+		BB96C09C297B274E003E1918 /* surah-68.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-68.json"; sourceTree = "<group>"; };
+		BB96C09D297B274E003E1918 /* surah-87.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-87.json"; sourceTree = "<group>"; };
+		BB96C09E297B274E003E1918 /* surah-91.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-91.json"; sourceTree = "<group>"; };
+		BB96C09F297B274E003E1918 /* surah-29.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-29.json"; sourceTree = "<group>"; };
+		BB96C0A0297B274E003E1918 /* surah-52.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-52.json"; sourceTree = "<group>"; };
+		BB96C0A1297B274E003E1918 /* surah-13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-13.json"; sourceTree = "<group>"; };
+		BB96C0A2297B274E003E1918 /* surah-44.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-44.json"; sourceTree = "<group>"; };
+		BB96C0A3297B274E003E1918 /* surah-33.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-33.json"; sourceTree = "<group>"; };
+		BB96C0A4297B274E003E1918 /* surah-103.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-103.json"; sourceTree = "<group>"; };
+		BB96C0A5297B274E003E1918 /* surah-64.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-64.json"; sourceTree = "<group>"; };
+		BB96C0A6297B274E003E1918 /* surah-72.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-72.json"; sourceTree = "<group>"; };
+		BB96C0A7297B274E003E1918 /* surah-25.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-25.json"; sourceTree = "<group>"; };
+		BB96C0A8297B274E003E1918 /* surah-48.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-48.json"; sourceTree = "<group>"; };
+		BB96C0A9297B274E003E1918 /* surah-49.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-49.json"; sourceTree = "<group>"; };
+		BB96C0AA297B274E003E1918 /* surah-24.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-24.json"; sourceTree = "<group>"; };
+		BB96C0AB297B274E003E1918 /* surah-73.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-73.json"; sourceTree = "<group>"; };
+		BB96C0AC297B274E003E1918 /* surah-114.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-114.json"; sourceTree = "<group>"; };
+		BB96C0AD297B274E003E1918 /* surah-65.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-65.json"; sourceTree = "<group>"; };
+		BB96C0AE297B274E003E1918 /* surah-102.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-102.json"; sourceTree = "<group>"; };
+		BB96C0AF297B274E003E1918 /* surah-32.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-32.json"; sourceTree = "<group>"; };
+		BB96C0B0297B274E003E1918 /* surah-45.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-45.json"; sourceTree = "<group>"; };
+		BB96C0B1297B274E003E1918 /* surah-12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-12.json"; sourceTree = "<group>"; };
+		BB96C0B2297B274E003E1918 /* surah-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-1.json"; sourceTree = "<group>"; };
+		BB96C0B3297B274E003E1918 /* surah-53.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-53.json"; sourceTree = "<group>"; };
+		BB96C0B4297B274E003E1918 /* surah-28.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-28.json"; sourceTree = "<group>"; };
+		BB96C0B5297B274E003E1918 /* surah-90.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-90.json"; sourceTree = "<group>"; };
+		BB96C0B6297B274E003E1918 /* surah-69.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-69.json"; sourceTree = "<group>"; };
+		BB96C0B7297B274E003E1918 /* surah-86.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-86.json"; sourceTree = "<group>"; };
+		BB96C0B8297B274E003E1918 /* surah-46.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-46.json"; sourceTree = "<group>"; };
+		BB96C0B9297B274E003E1918 /* surah-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-11.json"; sourceTree = "<group>"; };
+		BB96C0BA297B274E003E1918 /* surah-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-2.json"; sourceTree = "<group>"; };
+		BB96C0BB297B274E003E1918 /* surah-50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-50.json"; sourceTree = "<group>"; };
+		BB96C0BC297B274E003E1918 /* surah-93.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-93.json"; sourceTree = "<group>"; };
+		BB96C0BD297B274E003E1918 /* surah-85.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-85.json"; sourceTree = "<group>"; };
+		BB96C0BE297B274E003E1918 /* surah-27.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-27.json"; sourceTree = "<group>"; };
+		BB96C0BF297B274E003E1918 /* surah-70.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-70.json"; sourceTree = "<group>"; };
+		BB96C0C0297B274E003E1918 /* surah-89.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-89.json"; sourceTree = "<group>"; };
+		BB96C0C1297B274E003E1918 /* surah-66.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-66.json"; sourceTree = "<group>"; };
+		BB96C0C2297B274E003E1918 /* surah-101.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-101.json"; sourceTree = "<group>"; };
+		BB96C0C3297B274E003E1918 /* surah-31.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-31.json"; sourceTree = "<group>"; };
+		BB96C0C4297B274E003E1918 /* surah-30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-30.json"; sourceTree = "<group>"; };
+		BB96C0C5297B274E003E1918 /* surah-88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-88.json"; sourceTree = "<group>"; };
+		BB96C0C6297B274E003E1918 /* surah-100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-100.json"; sourceTree = "<group>"; };
+		BB96C0C7297B274E003E1918 /* surah-67.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-67.json"; sourceTree = "<group>"; };
+		BB96C0C8297B274E003E1918 /* surah-71.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-71.json"; sourceTree = "<group>"; };
+		BB96C0C9297B274E003E1918 /* surah-26.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-26.json"; sourceTree = "<group>"; };
+		BB96C0CA297B274E003E1918 /* surah-84.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-84.json"; sourceTree = "<group>"; };
+		BB96C0CB297B274E003E1918 /* surah-92.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-92.json"; sourceTree = "<group>"; };
+		BB96C0CC297B274E003E1918 /* surah-51.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-51.json"; sourceTree = "<group>"; };
+		BB96C0CD297B274E003E1918 /* surah-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-3.json"; sourceTree = "<group>"; };
+		BB96C0CE297B274E003E1918 /* surah-10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-10.json"; sourceTree = "<group>"; };
+		BB96C0CF297B274E003E1918 /* surah-47.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-47.json"; sourceTree = "<group>"; };
+		BB96C0D0297B274E003E1918 /* surah-8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-8.json"; sourceTree = "<group>"; };
+		BB96C0D1297B274E003E1918 /* surah-21.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-21.json"; sourceTree = "<group>"; };
+		BB96C0D2297B274E003E1918 /* surah-99.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-99.json"; sourceTree = "<group>"; };
+		BB96C0D3297B274E003E1918 /* surah-76.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-76.json"; sourceTree = "<group>"; };
+		BB96C0D4297B274E003E1918 /* surah-111.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-111.json"; sourceTree = "<group>"; };
+		BB96C0D5297B274E003E1918 /* surah-60.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-60.json"; sourceTree = "<group>"; };
+		BB96C0D6297B274E003E1918 /* surah-107.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-107.json"; sourceTree = "<group>"; };
+		BB96C0D7297B274E003E1918 /* surah-37.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-37.json"; sourceTree = "<group>"; };
+		BB96C0D8297B274E003E1918 /* surah-40.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-40.json"; sourceTree = "<group>"; };
+		BB96C0D9297B274E003E1918 /* surah-17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-17.json"; sourceTree = "<group>"; };
+		BB96C0DA297B274E003E1918 /* surah-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-4.json"; sourceTree = "<group>"; };
+		BB96C0DB297B274E003E1918 /* surah-56.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-56.json"; sourceTree = "<group>"; };
+		BB96C0DC297B274E003E1918 /* surah-95.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-95.json"; sourceTree = "<group>"; };
+		BB96C0DD297B274E003E1918 /* surah-83.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-83.json"; sourceTree = "<group>"; };
+		BB96C0DE297B274E003E1918 /* surah-82.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-82.json"; sourceTree = "<group>"; };
+		BB96C0DF297B274E003E1918 /* surah-94.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-94.json"; sourceTree = "<group>"; };
+		BB96C0E0297B274E003E1918 /* surah-57.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-57.json"; sourceTree = "<group>"; };
+		BB96C0E1297B274E003E1918 /* surah-5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-5.json"; sourceTree = "<group>"; };
+		BB96C0E2297B274E003E1918 /* surah-16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-16.json"; sourceTree = "<group>"; };
+		BB96C0E3297B274E003E1918 /* surah-41.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-41.json"; sourceTree = "<group>"; };
+		BB96C0E4297B274E003E1918 /* surah-36.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-36.json"; sourceTree = "<group>"; };
+		BB96C0E5297B274E003E1918 /* surah-106.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-106.json"; sourceTree = "<group>"; };
+		BB96C0E6297B274E003E1918 /* surah-61.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-61.json"; sourceTree = "<group>"; };
+		BB96C0E7297B274E003E1918 /* surah-98.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-98.json"; sourceTree = "<group>"; };
+		BB96C0E8297B274E003E1918 /* surah-110.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-110.json"; sourceTree = "<group>"; };
+		BB96C0E9297B274E003E1918 /* surah-77.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-77.json"; sourceTree = "<group>"; };
+		BB96C0EA297B274E003E1918 /* surah-20.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-20.json"; sourceTree = "<group>"; };
+		BB96C0EB297B274E003E1918 /* surah-9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-9.json"; sourceTree = "<group>"; };
+		BB96C0EC297B274E003E1918 /* surah-details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "surah-details.json"; sourceTree = "<group>"; };
+		BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProtocol.swift; sourceTree = "<group>"; };
+		BB96C0EE297B274E003E1918 /* QuranUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuranUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +336,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB96BE54297B1AC8003E1918 /* SwiftAudioEx in Frameworks */,
 				BB96BE3D297B16AE003E1918 /* Adhan in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB96BF51297B233D003E1918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB96BF74297B2520003E1918 /* Adhan in Frameworks */,
+				BB96BF59297B233D003E1918 /* SwiftUI.framework in Frameworks */,
+				BB96BF57297B233D003E1918 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				BB96BE2B297B156C003E1918 /* Salaam */,
+				BB96BF5A297B233D003E1918 /* Widget */,
+				BB96BF55297B233D003E1918 /* Frameworks */,
 				BB96BE2A297B156C003E1918 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				BB96BE29297B156C003E1918 /* Salaam.app */,
+				BB96BF54297B233D003E1918 /* WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +378,7 @@
 			children = (
 				BB96BE2C297B156C003E1918 /* SalaamApp.swift */,
 				BB96BE2E297B156C003E1918 /* ContentView.swift */,
+				BB96C070297B274E003E1918 /* Quran-UI */,
 				BB96BE4F297B1A24003E1918 /* Qibla */,
 				BB96BE48297B188C003E1918 /* Settings */,
 				BB96BE43297B175B003E1918 /* Utilities */,
@@ -127,6 +434,173 @@
 			path = Qibla;
 			sourceTree = "<group>";
 		};
+		BB96BF55297B233D003E1918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BF56297B233D003E1918 /* WidgetKit.framework */,
+				BB96BF58297B233D003E1918 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB96BF5A297B233D003E1918 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				BB96BF5F297B233D003E1918 /* Widget.swift */,
+				BB96BF61297B233D003E1918 /* Widget.intentdefinition */,
+				BB96BF62297B233F003E1918 /* Assets.xcassets */,
+				BB96BF64297B233F003E1918 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		BB96C070297B274E003E1918 /* Quran-UI */ = {
+			isa = PBXGroup;
+			children = (
+				BB96C071297B274E003E1918 /* AudioPlayer.swift */,
+				BB96C072297B274E003E1918 /* SurahItemModel.swift */,
+				BB96C073297B274E003E1918 /* FileManager.swift */,
+				BB96C074297B274E003E1918 /* SurahDetailsView.swift */,
+				BB96C075297B274E003E1918 /* Data+String.swift */,
+				BB96C076297B274E003E1918 /* AyahItemModel.swift */,
+				BB96C077297B274E003E1918 /* SurahDetailsViewModel.swift */,
+				BB96C078297B274E003E1918 /* Files */,
+				BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */,
+				BB96C0EE297B274E003E1918 /* QuranUI.swift */,
+			);
+			path = "Quran-UI";
+			sourceTree = "<group>";
+		};
+		BB96C078297B274E003E1918 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB96C079297B274E003E1918 /* surahas */,
+				BB96C0EC297B274E003E1918 /* surah-details.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		BB96C079297B274E003E1918 /* surahas */ = {
+			isa = PBXGroup;
+			children = (
+				BB96C07A297B274E003E1918 /* surah-35.json */,
+				BB96C07B297B274E003E1918 /* surah-105.json */,
+				BB96C07C297B274E003E1918 /* surah-62.json */,
+				BB96C07D297B274E003E1918 /* surah-113.json */,
+				BB96C07E297B274E003E1918 /* surah-74.json */,
+				BB96C07F297B274E003E1918 /* surah-23.json */,
+				BB96C080297B274E003E1918 /* surah-58.json */,
+				BB96C081297B274E003E1918 /* surah-19.json */,
+				BB96C082297B274E003E1918 /* surah-39.json */,
+				BB96C083297B274E003E1918 /* surah-109.json */,
+				BB96C084297B274E003E1918 /* surah-81.json */,
+				BB96C085297B274E003E1918 /* surah-78.json */,
+				BB96C086297B274E003E1918 /* surah-97.json */,
+				BB96C087297B274E003E1918 /* surah-54.json */,
+				BB96C088297B274E003E1918 /* surah-6.json */,
+				BB96C089297B274E003E1918 /* surah-15.json */,
+				BB96C08A297B274E003E1918 /* surah-42.json */,
+				BB96C08B297B274E003E1918 /* surah-43.json */,
+				BB96C08C297B274E003E1918 /* surah-14.json */,
+				BB96C08D297B274E003E1918 /* surah-7.json */,
+				BB96C08E297B274E003E1918 /* surah-55.json */,
+				BB96C08F297B274E003E1918 /* surah-79.json */,
+				BB96C090297B274E003E1918 /* surah-96.json */,
+				BB96C091297B274E003E1918 /* surah-108.json */,
+				BB96C092297B274E003E1918 /* surah-80.json */,
+				BB96C093297B274E003E1918 /* surah-38.json */,
+				BB96C094297B274E003E1918 /* surah-18.json */,
+				BB96C095297B274E003E1918 /* surah-59.json */,
+				BB96C096297B274E003E1918 /* surah-22.json */,
+				BB96C097297B274E003E1918 /* surah-75.json */,
+				BB96C098297B274E003E1918 /* surah-112.json */,
+				BB96C099297B274E003E1918 /* surah-63.json */,
+				BB96C09A297B274E003E1918 /* surah-104.json */,
+				BB96C09B297B274E003E1918 /* surah-34.json */,
+				BB96C09C297B274E003E1918 /* surah-68.json */,
+				BB96C09D297B274E003E1918 /* surah-87.json */,
+				BB96C09E297B274E003E1918 /* surah-91.json */,
+				BB96C09F297B274E003E1918 /* surah-29.json */,
+				BB96C0A0297B274E003E1918 /* surah-52.json */,
+				BB96C0A1297B274E003E1918 /* surah-13.json */,
+				BB96C0A2297B274E003E1918 /* surah-44.json */,
+				BB96C0A3297B274E003E1918 /* surah-33.json */,
+				BB96C0A4297B274E003E1918 /* surah-103.json */,
+				BB96C0A5297B274E003E1918 /* surah-64.json */,
+				BB96C0A6297B274E003E1918 /* surah-72.json */,
+				BB96C0A7297B274E003E1918 /* surah-25.json */,
+				BB96C0A8297B274E003E1918 /* surah-48.json */,
+				BB96C0A9297B274E003E1918 /* surah-49.json */,
+				BB96C0AA297B274E003E1918 /* surah-24.json */,
+				BB96C0AB297B274E003E1918 /* surah-73.json */,
+				BB96C0AC297B274E003E1918 /* surah-114.json */,
+				BB96C0AD297B274E003E1918 /* surah-65.json */,
+				BB96C0AE297B274E003E1918 /* surah-102.json */,
+				BB96C0AF297B274E003E1918 /* surah-32.json */,
+				BB96C0B0297B274E003E1918 /* surah-45.json */,
+				BB96C0B1297B274E003E1918 /* surah-12.json */,
+				BB96C0B2297B274E003E1918 /* surah-1.json */,
+				BB96C0B3297B274E003E1918 /* surah-53.json */,
+				BB96C0B4297B274E003E1918 /* surah-28.json */,
+				BB96C0B5297B274E003E1918 /* surah-90.json */,
+				BB96C0B6297B274E003E1918 /* surah-69.json */,
+				BB96C0B7297B274E003E1918 /* surah-86.json */,
+				BB96C0B8297B274E003E1918 /* surah-46.json */,
+				BB96C0B9297B274E003E1918 /* surah-11.json */,
+				BB96C0BA297B274E003E1918 /* surah-2.json */,
+				BB96C0BB297B274E003E1918 /* surah-50.json */,
+				BB96C0BC297B274E003E1918 /* surah-93.json */,
+				BB96C0BD297B274E003E1918 /* surah-85.json */,
+				BB96C0BE297B274E003E1918 /* surah-27.json */,
+				BB96C0BF297B274E003E1918 /* surah-70.json */,
+				BB96C0C0297B274E003E1918 /* surah-89.json */,
+				BB96C0C1297B274E003E1918 /* surah-66.json */,
+				BB96C0C2297B274E003E1918 /* surah-101.json */,
+				BB96C0C3297B274E003E1918 /* surah-31.json */,
+				BB96C0C4297B274E003E1918 /* surah-30.json */,
+				BB96C0C5297B274E003E1918 /* surah-88.json */,
+				BB96C0C6297B274E003E1918 /* surah-100.json */,
+				BB96C0C7297B274E003E1918 /* surah-67.json */,
+				BB96C0C8297B274E003E1918 /* surah-71.json */,
+				BB96C0C9297B274E003E1918 /* surah-26.json */,
+				BB96C0CA297B274E003E1918 /* surah-84.json */,
+				BB96C0CB297B274E003E1918 /* surah-92.json */,
+				BB96C0CC297B274E003E1918 /* surah-51.json */,
+				BB96C0CD297B274E003E1918 /* surah-3.json */,
+				BB96C0CE297B274E003E1918 /* surah-10.json */,
+				BB96C0CF297B274E003E1918 /* surah-47.json */,
+				BB96C0D0297B274E003E1918 /* surah-8.json */,
+				BB96C0D1297B274E003E1918 /* surah-21.json */,
+				BB96C0D2297B274E003E1918 /* surah-99.json */,
+				BB96C0D3297B274E003E1918 /* surah-76.json */,
+				BB96C0D4297B274E003E1918 /* surah-111.json */,
+				BB96C0D5297B274E003E1918 /* surah-60.json */,
+				BB96C0D6297B274E003E1918 /* surah-107.json */,
+				BB96C0D7297B274E003E1918 /* surah-37.json */,
+				BB96C0D8297B274E003E1918 /* surah-40.json */,
+				BB96C0D9297B274E003E1918 /* surah-17.json */,
+				BB96C0DA297B274E003E1918 /* surah-4.json */,
+				BB96C0DB297B274E003E1918 /* surah-56.json */,
+				BB96C0DC297B274E003E1918 /* surah-95.json */,
+				BB96C0DD297B274E003E1918 /* surah-83.json */,
+				BB96C0DE297B274E003E1918 /* surah-82.json */,
+				BB96C0DF297B274E003E1918 /* surah-94.json */,
+				BB96C0E0297B274E003E1918 /* surah-57.json */,
+				BB96C0E1297B274E003E1918 /* surah-5.json */,
+				BB96C0E2297B274E003E1918 /* surah-16.json */,
+				BB96C0E3297B274E003E1918 /* surah-41.json */,
+				BB96C0E4297B274E003E1918 /* surah-36.json */,
+				BB96C0E5297B274E003E1918 /* surah-106.json */,
+				BB96C0E6297B274E003E1918 /* surah-61.json */,
+				BB96C0E7297B274E003E1918 /* surah-98.json */,
+				BB96C0E8297B274E003E1918 /* surah-110.json */,
+				BB96C0E9297B274E003E1918 /* surah-77.json */,
+				BB96C0EA297B274E003E1918 /* surah-20.json */,
+				BB96C0EB297B274E003E1918 /* surah-9.json */,
+			);
+			path = surahas;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,18 +611,41 @@
 				BB96BE25297B156C003E1918 /* Sources */,
 				BB96BE26297B156C003E1918 /* Frameworks */,
 				BB96BE27297B156C003E1918 /* Resources */,
+				BB96BF6D297B233F003E1918 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB96BF68297B233F003E1918 /* PBXTargetDependency */,
+			);
+			name = Salaam;
+			packageProductDependencies = (
+				BB96BE3C297B16AE003E1918 /* Adhan */,
+				BB96BE53297B1AC8003E1918 /* SwiftAudioEx */,
+			);
+			productName = Salaam;
+			productReference = BB96BE29297B156C003E1918 /* Salaam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB96BF53297B233D003E1918 /* WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB96BF6A297B233F003E1918 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
+			buildPhases = (
+				BB96BF50297B233D003E1918 /* Sources */,
+				BB96BF51297B233D003E1918 /* Frameworks */,
+				BB96BF52297B233D003E1918 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Salaam;
+			name = WidgetExtension;
 			packageProductDependencies = (
-				BB96BE3C297B16AE003E1918 /* Adhan */,
+				BB96BF73297B2520003E1918 /* Adhan */,
 			);
-			productName = Salaam;
-			productReference = BB96BE29297B156C003E1918 /* Salaam.app */;
-			productType = "com.apple.product-type.application";
+			productName = WidgetExtension;
+			productReference = BB96BF54297B233D003E1918 /* WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,6 +658,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					BB96BE28297B156C003E1918 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					BB96BF53297B233D003E1918 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -176,12 +676,14 @@
 			mainGroup = BB96BE20297B156C003E1918;
 			packageReferences = (
 				BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */,
+				BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */,
 			);
 			productRefGroup = BB96BE2A297B156C003E1918 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BB96BE28297B156C003E1918 /* Salaam */,
+				BB96BF53297B233D003E1918 /* WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -191,8 +693,132 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB96C14E297B274F003E1918 /* surah-99.json in Resources */,
+				BB96C147297B274F003E1918 /* surah-92.json in Resources */,
+				BB96C117297B274F003E1918 /* surah-34.json in Resources */,
+				BB96C0FC297B274E003E1918 /* surah-58.json in Resources */,
+				BB96C146297B274F003E1918 /* surah-84.json in Resources */,
+				BB96C15D297B274F003E1918 /* surah-5.json in Resources */,
+				BB96C10A297B274F003E1918 /* surah-55.json in Resources */,
+				BB96C109297B274F003E1918 /* surah-7.json in Resources */,
+				BB96C155297B274F003E1918 /* surah-17.json in Resources */,
+				BB96C0FD297B274E003E1918 /* surah-19.json in Resources */,
+				BB96C14C297B274F003E1918 /* surah-8.json in Resources */,
+				BB96C0F7297B274E003E1918 /* surah-105.json in Resources */,
+				BB96C13A297B274F003E1918 /* surah-27.json in Resources */,
+				BB96C125297B274F003E1918 /* surah-49.json in Resources */,
+				BB96C100297B274E003E1918 /* surah-81.json in Resources */,
+				BB96C161297B274F003E1918 /* surah-106.json in Resources */,
+				BB96C0F9297B274E003E1918 /* surah-113.json in Resources */,
+				BB96C14F297B274F003E1918 /* surah-76.json in Resources */,
+				BB96C168297B274F003E1918 /* surah-details.json in Resources */,
+				BB96C153297B274F003E1918 /* surah-37.json in Resources */,
+				BB96C15F297B274F003E1918 /* surah-41.json in Resources */,
+				BB96C156297B274F003E1918 /* surah-4.json in Resources */,
+				BB96C132297B274F003E1918 /* surah-69.json in Resources */,
+				BB96C12E297B274F003E1918 /* surah-1.json in Resources */,
+				BB96C134297B274F003E1918 /* surah-46.json in Resources */,
+				BB96C104297B274E003E1918 /* surah-6.json in Resources */,
+				BB96C115297B274F003E1918 /* surah-63.json in Resources */,
+				BB96C150297B274F003E1918 /* surah-111.json in Resources */,
+				BB96C159297B274F003E1918 /* surah-83.json in Resources */,
+				BB96C128297B274F003E1918 /* surah-114.json in Resources */,
+				BB96C108297B274F003E1918 /* surah-14.json in Resources */,
+				BB96C11F297B274F003E1918 /* surah-33.json in Resources */,
+				BB96C123297B274F003E1918 /* surah-25.json in Resources */,
+				BB96C14A297B274F003E1918 /* surah-10.json in Resources */,
+				BB96C13D297B274F003E1918 /* surah-66.json in Resources */,
+				BB96C110297B274F003E1918 /* surah-18.json in Resources */,
+				BB96C121297B274F003E1918 /* surah-64.json in Resources */,
+				BB96C11C297B274F003E1918 /* surah-52.json in Resources */,
+				BB96C12D297B274F003E1918 /* surah-12.json in Resources */,
+				BB96C148297B274F003E1918 /* surah-51.json in Resources */,
+				BB96C137297B274F003E1918 /* surah-50.json in Resources */,
+				BB96C12B297B274F003E1918 /* surah-32.json in Resources */,
+				BB96C12F297B274F003E1918 /* surah-53.json in Resources */,
+				BB96C129297B274F003E1918 /* surah-65.json in Resources */,
+				BB96C10D297B274F003E1918 /* surah-108.json in Resources */,
+				BB96C0FF297B274E003E1918 /* surah-109.json in Resources */,
+				BB96C15B297B274F003E1918 /* surah-94.json in Resources */,
+				BB96C11D297B274F003E1918 /* surah-13.json in Resources */,
+				BB96C151297B274F003E1918 /* surah-60.json in Resources */,
+				BB96C14D297B274F003E1918 /* surah-21.json in Resources */,
+				BB96C102297B274E003E1918 /* surah-97.json in Resources */,
+				BB96C0FE297B274E003E1918 /* surah-39.json in Resources */,
+				BB96C131297B274F003E1918 /* surah-90.json in Resources */,
+				BB96C11B297B274F003E1918 /* surah-29.json in Resources */,
+				BB96C13E297B274F003E1918 /* surah-101.json in Resources */,
+				BB96C15C297B274F003E1918 /* surah-57.json in Resources */,
+				BB96C164297B274F003E1918 /* surah-110.json in Resources */,
+				BB96C15A297B274F003E1918 /* surah-82.json in Resources */,
+				BB96C119297B274F003E1918 /* surah-87.json in Resources */,
+				BB96C122297B274F003E1918 /* surah-72.json in Resources */,
+				BB96C13B297B274F003E1918 /* surah-70.json in Resources */,
+				BB96C160297B274F003E1918 /* surah-36.json in Resources */,
+				BB96C105297B274E003E1918 /* surah-15.json in Resources */,
+				BB96C158297B274F003E1918 /* surah-95.json in Resources */,
+				BB96C0FB297B274E003E1918 /* surah-23.json in Resources */,
+				BB96C145297B274F003E1918 /* surah-26.json in Resources */,
+				BB96C101297B274E003E1918 /* surah-78.json in Resources */,
+				BB96C113297B274F003E1918 /* surah-75.json in Resources */,
+				BB96C0FA297B274E003E1918 /* surah-74.json in Resources */,
+				BB96C116297B274F003E1918 /* surah-104.json in Resources */,
+				BB96C13C297B274F003E1918 /* surah-89.json in Resources */,
+				BB96C154297B274F003E1918 /* surah-40.json in Resources */,
+				BB96C166297B274F003E1918 /* surah-20.json in Resources */,
+				BB96C10C297B274F003E1918 /* surah-96.json in Resources */,
+				BB96C10E297B274F003E1918 /* surah-80.json in Resources */,
+				BB96C12A297B274F003E1918 /* surah-102.json in Resources */,
+				BB96C136297B274F003E1918 /* surah-2.json in Resources */,
+				BB96C0F8297B274E003E1918 /* surah-62.json in Resources */,
+				BB96C167297B274F003E1918 /* surah-9.json in Resources */,
+				BB96C139297B274F003E1918 /* surah-85.json in Resources */,
+				BB96C111297B274F003E1918 /* surah-59.json in Resources */,
+				BB96C112297B274F003E1918 /* surah-22.json in Resources */,
+				BB96C152297B274F003E1918 /* surah-107.json in Resources */,
+				BB96C10F297B274F003E1918 /* surah-38.json in Resources */,
+				BB96C0F6297B274E003E1918 /* surah-35.json in Resources */,
 				BB96BE35297B156D003E1918 /* Preview Assets.xcassets in Resources */,
+				BB96C127297B274F003E1918 /* surah-73.json in Resources */,
+				BB96C124297B274F003E1918 /* surah-48.json in Resources */,
+				BB96C14B297B274F003E1918 /* surah-47.json in Resources */,
+				BB96C157297B274F003E1918 /* surah-56.json in Resources */,
+				BB96C163297B274F003E1918 /* surah-98.json in Resources */,
+				BB96C114297B274F003E1918 /* surah-112.json in Resources */,
+				BB96C133297B274F003E1918 /* surah-86.json in Resources */,
+				BB96C107297B274F003E1918 /* surah-43.json in Resources */,
+				BB96C11E297B274F003E1918 /* surah-44.json in Resources */,
+				BB96C162297B274F003E1918 /* surah-61.json in Resources */,
+				BB96C15E297B274F003E1918 /* surah-16.json in Resources */,
+				BB96C138297B274F003E1918 /* surah-93.json in Resources */,
+				BB96C140297B274F003E1918 /* surah-30.json in Resources */,
+				BB96C106297B274F003E1918 /* surah-42.json in Resources */,
+				BB96C143297B274F003E1918 /* surah-67.json in Resources */,
+				BB96C142297B274F003E1918 /* surah-100.json in Resources */,
+				BB96C10B297B274F003E1918 /* surah-79.json in Resources */,
+				BB96C120297B274F003E1918 /* surah-103.json in Resources */,
+				BB96C103297B274E003E1918 /* surah-54.json in Resources */,
+				BB96C141297B274F003E1918 /* surah-88.json in Resources */,
+				BB96C144297B274F003E1918 /* surah-71.json in Resources */,
+				BB96C11A297B274F003E1918 /* surah-91.json in Resources */,
+				BB96C130297B274F003E1918 /* surah-28.json in Resources */,
+				BB96C126297B274F003E1918 /* surah-24.json in Resources */,
+				BB96C12C297B274F003E1918 /* surah-45.json in Resources */,
+				BB96C149297B274F003E1918 /* surah-3.json in Resources */,
+				BB96C135297B274F003E1918 /* surah-11.json in Resources */,
+				BB96C13F297B274F003E1918 /* surah-31.json in Resources */,
+				BB96C165297B274F003E1918 /* surah-77.json in Resources */,
+				BB96C118297B274F003E1918 /* surah-68.json in Resources */,
 				BB96BE31297B156D003E1918 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB96BF52297B233D003E1918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB96BF72297B2479003E1918 /* Assets.xcassets in Resources */,
+				BB96BF63297B233F003E1918 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,19 +830,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB96BE47297B182B003E1918 /* NotificationController.swift in Sources */,
+				BB96C0F5297B274E003E1918 /* SurahDetailsViewModel.swift in Sources */,
+				BB96C169297B274F003E1918 /* PlayerProtocol.swift in Sources */,
 				BB96BE4C297B18C6003E1918 /* CalculationController.swift in Sources */,
+				BB96BF66297B233F003E1918 /* Widget.intentdefinition in Sources */,
+				BB96C0F1297B274E003E1918 /* FileManager.swift in Sources */,
 				BB96BE40297B16E1003E1918 /* PrayerTimeView.swift in Sources */,
 				BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */,
+				BB96C0F4297B274E003E1918 /* AyahItemModel.swift in Sources */,
+				BB96C16A297B274F003E1918 /* QuranUI.swift in Sources */,
 				BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */,
 				BB96BE45297B176A003E1918 /* LocationManager.swift in Sources */,
+				BB96C0F3297B274E003E1918 /* Data+String.swift in Sources */,
 				BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */,
 				BB96BE42297B171B003E1918 /* PrayerTimeViewModel.swift in Sources */,
 				BB96BE4A297B18B1003E1918 /* MadhabController.swift in Sources */,
+				BB96C0F0297B274E003E1918 /* SurahItemModel.swift in Sources */,
+				BB96C0F2297B274E003E1918 /* SurahDetailsView.swift in Sources */,
 				BB96BE2D297B156C003E1918 /* SalaamApp.swift in Sources */,
+				BB96C0EF297B274E003E1918 /* AudioPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB96BF50297B233D003E1918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB96BF71297B2460003E1918 /* PrayerTimeView.swift in Sources */,
+				BB96BF6F297B23A3003E1918 /* PrayerTimeViewModel.swift in Sources */,
+				BB96BF65297B233F003E1918 /* Widget.intentdefinition in Sources */,
+				BB96BF70297B241E003E1918 /* LocationManager.swift in Sources */,
+				BB96BF60297B233D003E1918 /* Widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB96BF68297B233F003E1918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB96BF53297B233D003E1918 /* WidgetExtension */;
+			targetProxy = BB96BF67297B233F003E1918 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BB96BE36297B156D003E1918 /* Debug */ = {
@@ -331,6 +987,7 @@
 		BB96BE39297B156D003E1918 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Salaam/Salaam.entitlements;
@@ -341,6 +998,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -371,6 +1029,7 @@
 		BB96BE3A297B156D003E1918 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Salaam/Salaam.entitlements;
@@ -381,6 +1040,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -408,6 +1068,65 @@
 			};
 			name = Release;
 		};
+		BB96BF6B297B233F003E1918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F5SNH459WD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Salaam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam.PrayerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB96BF6C297B233F003E1918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F5SNH459WD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Salaam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam.PrayerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +1148,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BB96BF6A297B233F003E1918 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB96BF6B297B233F003E1918 /* Debug */,
+				BB96BF6C297B233F003E1918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -440,10 +1168,28 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DoubleSymmetry/SwiftAudio.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		BB96BE3C297B16AE003E1918 /* Adhan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			productName = Adhan;
+		};
+		BB96BE53297B1AC8003E1918 /* SwiftAudioEx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */;
+			productName = SwiftAudioEx;
+		};
+		BB96BF73297B2520003E1918 /* Adhan */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */;
 			productName = Adhan;

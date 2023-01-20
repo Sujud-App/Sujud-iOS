@@ -61,22 +61,14 @@ struct SettingsView: View{
                             }
                         }.listRowSeparator(.hidden)
                         Section{
-                            Link("\(Image(systemName: "link")) Donate to Harrow Mosque  ", destination: URL(string: "https://paypal.com/donate/?hosted_button_id=FF9AN9AKM8BXS&source=url")!)
+                            Link("\(Image(systemName: "link")) Donate to help support me!", destination: URL(string: "https://paypal.me/babyyoda777?country.x=GB&locale.x=en_GB")!)
                                 .foregroundColor(.primary)
-                            Link("\(Image(systemName: "link")) Find out more about me!  ", destination: URL(string: "https://babyyoda777.github.io")!)
+                            Link("\(Image(systemName: "link")) Find out more about me!", destination: URL(string: "https://babyyoda777.github.io")!)
                                 .foregroundColor(.primary)
                         }.listRowSeparator(.hidden)
                         Section(footer:
-                                    Text("Designed and developed by Muhammad Shah. Credits: Thank You to Shah Law Chambers for helping fund this project.")){
-                            Link("\(Image(systemName: "play.rectangle.fill"))    YouTube ", destination: URL(string: "https://www.youtube.com/user/harrowmosque/videos")!)
-                                .foregroundColor(.primary)
-                            Link("\(Image(systemName: "camera.metering.center.weighted"))   Instagram ", destination: URL(string: "https://www.instagram.com/harrowmosque/")!)
-                                .foregroundColor(.primary)
-                            Link("\(Image("logo"))   Harrow Central Mosque Website ", destination: URL(string: "https://www.harrowmosque.org.uk")!)
-                                .foregroundColor(.primary)
-                                .padding(.bottom, 3)
-                                .padding(.top, -3)
-                            Link("\(Text("f").fontWeight(.bold).font(.system(size: 30)))      FaceBook ", destination: URL(string: "https://www.facebook.com/HarrowMosque")!)
+                                    Text("Designed and developed by Muhammad Shah.")){
+                            Link("\(Image(systemName: "link"))   Official Website ", destination: URL(string: "https://salaam.ml")!)
                                 .foregroundColor(.primary)
                         }.listRowSeparator(.hidden)
                         Spacer()

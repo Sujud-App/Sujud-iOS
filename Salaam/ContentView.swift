@@ -35,6 +35,10 @@ struct ContentView: View {
                     noty.scheduleNotification(times: (model.times?.maghrib)!)
                     noty.scheduleNotification(times: (model.times?.isha)!)
                 }
+            QuranUI()
+                .tabItem {
+                    Label("Quran", systemImage: "book.fill")
+                }
             QiblaView()
             
                 .tabItem {

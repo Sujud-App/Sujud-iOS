@@ -11,7 +11,7 @@ import SwiftUI
 struct SalaamApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(model: PrayerTimeViewModel(sunrise: "0", fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"))
         }
     }
 }
