@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Salaam
+//  Sujud
 //
 //  Created by Muhammad Shah on 20/01/2023.
 //

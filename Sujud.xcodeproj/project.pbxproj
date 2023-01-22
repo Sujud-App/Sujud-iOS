@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB96BE2D297B156C003E1918 /* SalaamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2C297B156C003E1918 /* SalaamApp.swift */; };
+		BB96BE2D297B156C003E1918 /* SujudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2C297B156C003E1918 /* SujudApp.swift */; };
 		BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2E297B156C003E1918 /* ContentView.swift */; };
 		BB96BE31297B156D003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
 		BB96BE35297B156D003E1918 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE34297B156D003E1918 /* Preview Assets.xcassets */; };
@@ -184,8 +184,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BB96BE29297B156C003E1918 /* Salaam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salaam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB96BE2C297B156C003E1918 /* SalaamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaamApp.swift; sourceTree = "<group>"; };
+		BB96BE29297B156C003E1918 /* Sujud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sujud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB96BE2C297B156C003E1918 /* SujudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SujudApp.swift; sourceTree = "<group>"; };
 		BB96BE2E297B156C003E1918 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB96BE30297B156D003E1918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB96BE32297B156D003E1918 /* Salaam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Salaam.entitlements; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				BB96C283297B2C48003E1918 /* WidgetExtension.entitlements */,
-				BB96BE2B297B156C003E1918 /* Salaam */,
+				BB96BE2B297B156C003E1918 /* Sujud */,
 				BB96BF5A297B233D003E1918 /* Widget */,
 				BB96BF55297B233D003E1918 /* Frameworks */,
 				BB96BE2A297B156C003E1918 /* Products */,
@@ -371,17 +371,17 @@
 		BB96BE2A297B156C003E1918 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB96BE29297B156C003E1918 /* Salaam.app */,
+				BB96BE29297B156C003E1918 /* Sujud.app */,
 				BB96BF54297B233D003E1918 /* WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB96BE2B297B156C003E1918 /* Salaam */ = {
+		BB96BE2B297B156C003E1918 /* Sujud */ = {
 			isa = PBXGroup;
 			children = (
 				BB96C287297B2EEF003E1918 /* Info.plist */,
-				BB96BE2C297B156C003E1918 /* SalaamApp.swift */,
+				BB96BE2C297B156C003E1918 /* SujudApp.swift */,
 				BB96BE2E297B156C003E1918 /* ContentView.swift */,
 				BB96C070297B274E003E1918 /* Quran-UI */,
 				BB96BE4F297B1A24003E1918 /* Qibla */,
@@ -392,7 +392,7 @@
 				BB96BE32297B156D003E1918 /* Salaam.entitlements */,
 				BB96BE33297B156D003E1918 /* Preview Content */,
 			);
-			path = Salaam;
+			path = Sujud;
 			sourceTree = "<group>";
 		};
 		BB96BE33297B156D003E1918 /* Preview Content */ = {
@@ -610,9 +610,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB96BE28297B156C003E1918 /* Salaam */ = {
+		BB96BE28297B156C003E1918 /* Sujud */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB96BE38297B156D003E1918 /* Build configuration list for PBXNativeTarget "Salaam" */;
+			buildConfigurationList = BB96BE38297B156D003E1918 /* Build configuration list for PBXNativeTarget "Sujud" */;
 			buildPhases = (
 				BB96BE25297B156C003E1918 /* Sources */,
 				BB96BE26297B156C003E1918 /* Frameworks */,
@@ -624,13 +624,13 @@
 			dependencies = (
 				BB96BF68297B233F003E1918 /* PBXTargetDependency */,
 			);
-			name = Salaam;
+			name = Sujud;
 			packageProductDependencies = (
 				BB96BE3C297B16AE003E1918 /* Adhan */,
 				BB96BE53297B1AC8003E1918 /* SwiftAudioEx */,
 			);
 			productName = Salaam;
-			productReference = BB96BE29297B156C003E1918 /* Salaam.app */;
+			productReference = BB96BE29297B156C003E1918 /* Sujud.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BB96BF53297B233D003E1918 /* WidgetExtension */ = {
@@ -671,7 +671,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB96BE24297B156C003E1918 /* Build configuration list for PBXProject "Salaam" */;
+			buildConfigurationList = BB96BE24297B156C003E1918 /* Build configuration list for PBXProject "Sujud" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -688,7 +688,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB96BE28297B156C003E1918 /* Salaam */,
+				BB96BE28297B156C003E1918 /* Sujud */,
 				BB96BF53297B233D003E1918 /* WidgetExtension */,
 			);
 		};
@@ -853,7 +853,7 @@
 				BB96BE4A297B18B1003E1918 /* MadhabController.swift in Sources */,
 				BB96C0F0297B274E003E1918 /* SurahItemModel.swift in Sources */,
 				BB96C0F2297B274E003E1918 /* SurahDetailsView.swift in Sources */,
-				BB96BE2D297B156C003E1918 /* SalaamApp.swift in Sources */,
+				BB96BE2D297B156C003E1918 /* SujudApp.swift in Sources */,
 				BB96C0EF297B274E003E1918 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1005,6 +1005,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Salaam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sujud;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1021,7 +1022,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1048,6 +1049,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Salaam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sujud;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uses your location to provide accurate timings and Qibla direction";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1064,7 +1066,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1096,7 +1098,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam.PrayerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1126,7 +1128,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Salaam.PrayerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1140,7 +1142,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB96BE24297B156C003E1918 /* Build configuration list for PBXProject "Salaam" */ = {
+		BB96BE24297B156C003E1918 /* Build configuration list for PBXProject "Sujud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB96BE36297B156D003E1918 /* Debug */,
@@ -1149,7 +1151,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB96BE38297B156D003E1918 /* Build configuration list for PBXNativeTarget "Salaam" */ = {
+		BB96BE38297B156D003E1918 /* Build configuration list for PBXNativeTarget "Sujud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB96BE39297B156D003E1918 /* Debug */,
