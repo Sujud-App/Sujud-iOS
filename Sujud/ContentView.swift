@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         TabView{
             let currentDateTime = Date()
-            PrayerView(pray: PrayerTimeViewModel(sunrise: "0", fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"), model: PrayerTimeViewModel(sunrise: "0", fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"), dates: "" ,  month:"",  currentYear:"")
+            PrayerView(pray: PrayerTimeViewModel(sunrise: "0", suhoor: "0", notisuhoor: currentDateTime, fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"), model: PrayerTimeViewModel(sunrise: "0",suhoor: "0", notisuhoor: currentDateTime, fajr: "0",  notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"), dates: "" ,  month:"",  currentYear:"")
                 .tabItem {
                     Label("Prayer Time", systemImage: "clock.fill")
                 }
@@ -34,6 +34,8 @@ struct ContentView: View {
                     noty.scheduleNotification(times: (model.times?.asr)!)
                     noty.scheduleNotification(times: (model.times?.maghrib)!)
                     noty.scheduleNotification(times: (model.times?.isha)!)
+                    noty.scheduleNotification(times: (model.notisuhoor))
+                    print(model.notisuhoor)
                 }
             QuranUI()
                 .tabItem {
@@ -44,12 +46,16 @@ struct ContentView: View {
                 .tabItem {
                     Label("Qibla", systemImage: "location.circle.fill")
                 }
+            FastingView(pray: PrayerTimeViewModel(sunrise: "0", suhoor: "0", notisuhoor: currentDateTime, fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"), model: PrayerTimeViewModel(sunrise: "0", suhoor: "0", notisuhoor: currentDateTime, fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"))
+                .tabItem {
+                    Label("Prayer Time", systemImage: "clock.fill")
+                }
             
-            SettingsView(noty: NotificationViewModel(), model: PrayerTimeViewModel(sunrise: "0", fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"))
+            SettingsView(noty: NotificationViewModel(), model: PrayerTimeViewModel(sunrise: "0", suhoor: "0", notisuhoor: currentDateTime, fajr: "0", notifajr: currentDateTime, zuhr: "0", notidhuhr: currentDateTime, asr: "0", notiasr: currentDateTime, maghrib: "0", notimaghrib: currentDateTime, isha: "0", notiisha: currentDateTime, current: "0", next: "0"))
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
-            
+             
         }
     }
 }

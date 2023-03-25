@@ -32,6 +32,7 @@ struct CalculationSettings: View{
                                     noti.scheduleNotification(times: (model.times?.asr)!)
                                     noti.scheduleNotification(times: (model.times?.maghrib)!)
                                     noti.scheduleNotification(times: (model.times?.isha)!)
+
                                 }
                             }
                             WidgetCenter.shared.reloadAllTimelines()

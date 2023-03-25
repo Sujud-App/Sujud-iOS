@@ -14,7 +14,9 @@ class PrayerTimeViewModel: ObservableObject {
 
     @Published var sunrise : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "SUNRISE") ?? ""
     @Published var fajr : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "FAJR") ?? ""
-    @Published var notifajr : Date
+    @Published var suhoor : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "SUHOOR") ?? ""
+    @Published var notisuhoor : Date
+    @Published var notifajr : Date 
     @Published var zuhr : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "ZUHR") ?? ""
     @Published var notidhuhr : Date
     @Published var asr : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "ASR") ?? ""
@@ -27,7 +29,7 @@ class PrayerTimeViewModel: ObservableObject {
     @Published var next : String = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "NEXT") ?? ""
     @Published var lm = LocationManager()
   
-    @Published var method: CalculationMethod = .northAmerica {
+    @Published var method: CalculationMethod = .HCM {
         didSet {
             UserDefaults(suiteName: "group.babyyoda777.Sujud")?.setValue(method.rawValue, forKey: "method")
             getPrayerTime(locationManager, didUpdateHeading: CLHeading.init())
@@ -47,7 +49,7 @@ class PrayerTimeViewModel: ObservableObject {
     @Published var currentPrayer: Prayer = .isha
 
     
-    init(sunrise: String, fajr : String, notifajr : Date, zuhr : String, notidhuhr : Date, asr : String, notiasr : Date, maghrib : String, notimaghrib : Date, isha : String, notiisha : Date, current : String, next : String) {
+    init(sunrise: String, suhoor: String, notisuhoor: Date, fajr : String, notifajr : Date, zuhr : String, notidhuhr : Date, asr : String, notiasr : Date, maghrib : String, notimaghrib : Date, isha : String, notiisha : Date, current : String, next : String) {
         
         UITabBar.appearance().backgroundColor = .clear
        UITableView.appearance().backgroundColor = UIColor.clear
@@ -59,6 +61,8 @@ class PrayerTimeViewModel: ObservableObject {
        
 
         self.sunrise = sunrise
+        self.suhoor = suhoor
+        self.notisuhoor = notisuhoor
         self.fajr = fajr
         self.notifajr = notifajr
         self.zuhr = zuhr
@@ -85,11 +89,13 @@ class PrayerTimeViewModel: ObservableObject {
                                       
         getPrayerTime(locationManager, didUpdateHeading: CLHeading.init())
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(fajr, forKey: "FAJR")
+        UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(fajr, forKey: "BEGINNING")
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(zuhr, forKey: "ZUHR")
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(asr, forKey: "ASR")
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(maghrib, forKey: "MAGHRIB")
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(isha, forKey: "ISHA")
         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(next, forKey: "NEXT")
+        UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(notifajr, forKey: "NOTIFAJR")
     }
       
     private let locationManager: CLLocationManager
@@ -112,22 +118,21 @@ class PrayerTimeViewModel: ObservableObject {
         let coordinates = Coordinates(latitude: (manager.location?.coordinate.latitude) ?? 51.57142, longitude: (manager.location?.coordinate.longitude) ?? 0.3396)
         var par = method.params
         par.madhab = mashab
-        par.adjustments.sunrise = -1
-        par.adjustments.dhuhr = 4
-        par.adjustments.asr = 1
-        par.adjustments.isha = -18
+         par.rounding = .nearest
         self.times = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: par)
         if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: par) {
             let formatter = DateFormatter()
             formatter.timeStyle = .short
             formatter.timeZone = TimeZone(identifier: "Europe/London")!
             
+            self.suhoor =  formatter.string(from: prayers.fajr)
             self.sunrise = formatter.string(from: prayers.sunrise)
             self.fajr = formatter.string(from: prayers.fajr)
             self.zuhr = formatter.string(from: prayers.dhuhr)
             self.asr = formatter.string(from: prayers.asr)
             self.maghrib = formatter.string(from: prayers.maghrib)
             self.isha = formatter.string(from: prayers.isha)
+            self.notisuhoor =  prayers.fajr
             self.notifajr = prayers.fajr
             self.notidhuhr = prayers.dhuhr
             self.notiasr = prayers.asr
@@ -150,6 +155,7 @@ class PrayerTimeViewModel: ObservableObject {
             
         }
          UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(fajr, forKey: "FAJR")
+         UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(fajr, forKey: "BEGINNING")
          UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(zuhr, forKey: "ZUHR")
          UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(asr, forKey: "ASR")
          UserDefaults(suiteName: "group.babyyoda777.Sujud")!.set(maghrib, forKey: "MAGHRIB")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB89631929C5CA6B0000517B /* FastingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89631829C5CA6B0000517B /* FastingView.swift */; };
 		BB96BE2D297B156C003E1918 /* SujudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2C297B156C003E1918 /* SujudApp.swift */; };
 		BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2E297B156C003E1918 /* ContentView.swift */; };
 		BB96BE31297B156D003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
@@ -184,6 +185,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB89631829C5CA6B0000517B /* FastingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingView.swift; sourceTree = "<group>"; };
 		BB96BE29297B156C003E1918 /* Sujud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sujud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB96BE2C297B156C003E1918 /* SujudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SujudApp.swift; sourceTree = "<group>"; };
 		BB96BE2E297B156C003E1918 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB89631729C5CA500000517B /* Fasting */ = {
+			isa = PBXGroup;
+			children = (
+				BB89631829C5CA6B0000517B /* FastingView.swift */,
+			);
+			path = Fasting;
+			sourceTree = "<group>";
+		};
 		BB96BE20297B156C003E1918 = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +393,7 @@
 				BB96C287297B2EEF003E1918 /* Info.plist */,
 				BB96BE2C297B156C003E1918 /* SujudApp.swift */,
 				BB96BE2E297B156C003E1918 /* ContentView.swift */,
+				BB89631729C5CA500000517B /* Fasting */,
 				BB96C070297B274E003E1918 /* Quran-UI */,
 				BB96BE4F297B1A24003E1918 /* Qibla */,
 				BB96BE48297B188C003E1918 /* Settings */,
@@ -851,6 +862,7 @@
 				BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */,
 				BB96BE42297B171B003E1918 /* PrayerTimeViewModel.swift in Sources */,
 				BB96BE4A297B18B1003E1918 /* MadhabController.swift in Sources */,
+				BB89631929C5CA6B0000517B /* FastingView.swift in Sources */,
 				BB96C0F0297B274E003E1918 /* SurahItemModel.swift in Sources */,
 				BB96C0F2297B274E003E1918 /* SurahDetailsView.swift in Sources */,
 				BB96BE2D297B156C003E1918 /* SujudApp.swift in Sources */,
@@ -1021,7 +1033,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1065,7 +1077,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1097,7 +1109,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1127,7 +1139,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
