@@ -88,9 +88,10 @@ extension SurahDetailsView {
                 player = MyAudioPlayer(playlist: playlist) { [weak self] index in
                     DispatchQueue.main.async {
                         self?.playingAyeNumber = index + aye - 1
+
                     }
                 }
-                player?.play()
+                player?.player?.play()
                 
                 return
             }
