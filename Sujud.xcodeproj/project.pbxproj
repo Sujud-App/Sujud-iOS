@@ -12,7 +12,6 @@
 		BB96BE2F297B156C003E1918 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE2E297B156C003E1918 /* ContentView.swift */; };
 		BB96BE31297B156D003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
 		BB96BE35297B156D003E1918 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE34297B156D003E1918 /* Preview Assets.xcassets */; };
-		BB96BE3D297B16AE003E1918 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BE3C297B16AE003E1918 /* Adhan */; };
 		BB96BE40297B16E1003E1918 /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */; };
 		BB96BE42297B171B003E1918 /* PrayerTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */; };
 		BB96BE45297B176A003E1918 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE44297B176A003E1918 /* LocationManager.swift */; };
@@ -22,18 +21,11 @@
 		BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE4D297B18DA003E1918 /* SettingsView.swift */; };
 		BB96BE51297B1A40003E1918 /* QiblaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE50297B1A40003E1918 /* QiblaView.swift */; };
 		BB96BE54297B1AC8003E1918 /* SwiftAudioEx in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BE53297B1AC8003E1918 /* SwiftAudioEx */; };
-		BB96BF57297B233D003E1918 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB96BF56297B233D003E1918 /* WidgetKit.framework */; };
-		BB96BF59297B233D003E1918 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB96BF58297B233D003E1918 /* SwiftUI.framework */; };
 		BB96BF60297B233D003E1918 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF5F297B233D003E1918 /* Widget.swift */; };
-		BB96BF63297B233F003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BF62297B233F003E1918 /* Assets.xcassets */; };
 		BB96BF65297B233F003E1918 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF61297B233D003E1918 /* Widget.intentdefinition */; };
-		BB96BF66297B233F003E1918 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BB96BF61297B233D003E1918 /* Widget.intentdefinition */; };
-		BB96BF69297B233F003E1918 /* WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB96BF54297B233D003E1918 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BB96BF6F297B23A3003E1918 /* PrayerTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE41297B171B003E1918 /* PrayerTimeViewModel.swift */; };
 		BB96BF70297B241E003E1918 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE44297B176A003E1918 /* LocationManager.swift */; };
-		BB96BF71297B2460003E1918 /* PrayerTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BE3F297B16E1003E1918 /* PrayerTimeView.swift */; };
 		BB96BF72297B2479003E1918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96BE30297B156D003E1918 /* Assets.xcassets */; };
-		BB96BF74297B2520003E1918 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BB96BF73297B2520003E1918 /* Adhan */; };
 		BB96C0EF297B274E003E1918 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C071297B274E003E1918 /* AudioPlayer.swift */; };
 		BB96C0F0297B274E003E1918 /* SurahItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C072297B274E003E1918 /* SurahItemModel.swift */; };
 		BB96C0F1297B274E003E1918 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C073297B274E003E1918 /* FileManager.swift */; };
@@ -158,6 +150,10 @@
 		BB96C169297B274F003E1918 /* PlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0ED297B274E003E1918 /* PlayerProtocol.swift */; };
 		BB96C16A297B274F003E1918 /* QuranUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96C0EE297B274E003E1918 /* QuranUI.swift */; };
 		BB96C286297B2D4F003E1918 /* surah-details.json in Resources */ = {isa = PBXBuildFile; fileRef = BB96C285297B2D4E003E1918 /* surah-details.json */; };
+		BBA9098A2BB6FBF900E93328 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BBA909892BB6FBF900E93328 /* Adhan */; };
+		BBA9098D2BB6FE3F00E93328 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = BBA9098C2BB6FE3F00E93328 /* Adhan */; };
+		BBA9098F2BB6FE4A00E93328 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA9098E2BB6FE4A00E93328 /* SwiftUI.framework */; };
+		BBA909902BB6FE7E00E93328 /* WidgetExtension.appex in Embed Foundation Extensions (1 item) */ = {isa = PBXBuildFile; fileRef = BB96BF54297B233D003E1918 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,15 +167,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BB96BF6D297B233F003E1918 /* Embed Foundation Extensions */ = {
+		BB96BF6D297B233F003E1918 /* Embed Foundation Extensions (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BB96BF69297B233F003E1918 /* WidgetExtension.appex in Embed Foundation Extensions */,
+				BBA909902BB6FE7E00E93328 /* WidgetExtension.appex in Embed Foundation Extensions (1 item) */,
 			);
-			name = "Embed Foundation Extensions";
+			name = "Embed Foundation Extensions (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -201,8 +197,6 @@
 		BB96BE4D297B18DA003E1918 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BB96BE50297B1A40003E1918 /* QiblaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaView.swift; sourceTree = "<group>"; };
 		BB96BF54297B233D003E1918 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB96BF56297B233D003E1918 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		BB96BF58297B233D003E1918 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BB96BF5F297B233D003E1918 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		BB96BF61297B233D003E1918 /* Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widget.intentdefinition; sourceTree = "<group>"; };
 		BB96BF62297B233F003E1918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -334,6 +328,7 @@
 		BB96C284297B2CAF003E1918 /* surahsss.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = surahsss.json; sourceTree = "<group>"; };
 		BB96C285297B2D4E003E1918 /* surah-details.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "surah-details.json"; sourceTree = "<group>"; };
 		BB96C287297B2EEF003E1918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BBA9098E2BB6FE4A00E93328 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,7 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB96BE54297B1AC8003E1918 /* SwiftAudioEx in Frameworks */,
-				BB96BE3D297B16AE003E1918 /* Adhan in Frameworks */,
+				BBA9098A2BB6FBF900E93328 /* Adhan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +345,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB96BF74297B2520003E1918 /* Adhan in Frameworks */,
-				BB96BF59297B233D003E1918 /* SwiftUI.framework in Frameworks */,
-				BB96BF57297B233D003E1918 /* WidgetKit.framework in Frameworks */,
+				BBA9098F2BB6FE4A00E93328 /* SwiftUI.framework in Frameworks */,
+				BBA9098D2BB6FE3F00E93328 /* Adhan in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,8 +447,7 @@
 		BB96BF55297B233D003E1918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB96BF56297B233D003E1918 /* WidgetKit.framework */,
-				BB96BF58297B233D003E1918 /* SwiftUI.framework */,
+				BBA9098E2BB6FE4A00E93328 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -628,7 +621,7 @@
 				BB96BE25297B156C003E1918 /* Sources */,
 				BB96BE26297B156C003E1918 /* Frameworks */,
 				BB96BE27297B156C003E1918 /* Resources */,
-				BB96BF6D297B233F003E1918 /* Embed Foundation Extensions */,
+				BB96BF6D297B233F003E1918 /* Embed Foundation Extensions (1 item) */,
 			);
 			buildRules = (
 			);
@@ -637,8 +630,8 @@
 			);
 			name = Sujud;
 			packageProductDependencies = (
-				BB96BE3C297B16AE003E1918 /* Adhan */,
 				BB96BE53297B1AC8003E1918 /* SwiftAudioEx */,
+				BBA909892BB6FBF900E93328 /* Adhan */,
 			);
 			productName = Salaam;
 			productReference = BB96BE29297B156C003E1918 /* Sujud.app */;
@@ -658,7 +651,7 @@
 			);
 			name = WidgetExtension;
 			packageProductDependencies = (
-				BB96BF73297B2520003E1918 /* Adhan */,
+				BBA9098C2BB6FE3F00E93328 /* Adhan */,
 			);
 			productName = WidgetExtension;
 			productReference = BB96BF54297B233D003E1918 /* WidgetExtension.appex */;
@@ -672,7 +665,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					BB96BE28297B156C003E1918 = {
 						CreatedOnToolsVersion = 14.2;
@@ -692,8 +685,8 @@
 			);
 			mainGroup = BB96BE20297B156C003E1918;
 			packageReferences = (
-				BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */,
 				BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */,
+				BBA909882BB6FBF900E93328 /* XCRemoteSwiftPackageReference "Adhan-Swift" */,
 			);
 			productRefGroup = BB96BE2A297B156C003E1918 /* Products */;
 			projectDirPath = "";
@@ -835,7 +828,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB96BF72297B2479003E1918 /* Assets.xcassets in Resources */,
-				BB96BF63297B233F003E1918 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +842,6 @@
 				BB96C0F5297B274E003E1918 /* SurahDetailsViewModel.swift in Sources */,
 				BB96C169297B274F003E1918 /* PlayerProtocol.swift in Sources */,
 				BB96BE4C297B18C6003E1918 /* CalculationController.swift in Sources */,
-				BB96BF66297B233F003E1918 /* Widget.intentdefinition in Sources */,
 				BB96C0F1297B274E003E1918 /* FileManager.swift in Sources */,
 				BB96BE40297B16E1003E1918 /* PrayerTimeView.swift in Sources */,
 				BB96BE4E297B18DA003E1918 /* SettingsView.swift in Sources */,
@@ -874,7 +865,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB96BF71297B2460003E1918 /* PrayerTimeView.swift in Sources */,
 				BB96BF6F297B23A3003E1918 /* PrayerTimeViewModel.swift in Sources */,
 				BB96BF65297B233F003E1918 /* Widget.intentdefinition in Sources */,
 				BB96BF70297B241E003E1918 /* LocationManager.swift in Sources */,
@@ -897,6 +887,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -926,9 +917,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -955,6 +948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -984,9 +978,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1011,8 +1007,9 @@
 				CODE_SIGN_ENTITLEMENTS = Sujud/Salaam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sujud/Preview Content\"";
-				DEVELOPMENT_TEAM = F5SNH459WD;
+				DEVELOPMENT_TEAM = Z994R8374W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1034,7 +1031,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babyyoda777.Sujud-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1055,8 +1052,9 @@
 				CODE_SIGN_ENTITLEMENTS = Sujud/Salaam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Sujud/Preview Content\"";
-				DEVELOPMENT_TEAM = F5SNH459WD;
+				DEVELOPMENT_TEAM = Z994R8374W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1078,7 +1076,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babyyoda777.Sujud-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1098,7 +1096,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F5SNH459WD;
+				DEVELOPMENT_TEAM = Z994R8374W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Salaam;
@@ -1110,7 +1108,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babyyoda777.Sujud-iOS.Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1128,7 +1126,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F5SNH459WD;
+				DEVELOPMENT_TEAM = Z994R8374W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Salaam;
@@ -1140,7 +1138,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.babyyoda777.Sujud.PrayerWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babyyoda777.Sujud-iOS.Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1184,14 +1182,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/batoulapps/adhan-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DoubleSymmetry/SwiftAudio.git";
@@ -1200,22 +1190,30 @@
 				kind = branch;
 			};
 		};
+		BBA909882BB6FBF900E93328 /* XCRemoteSwiftPackageReference "Adhan-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/babyyoda777/Adhan-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BB96BE3C297B16AE003E1918 /* Adhan */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */;
-			productName = Adhan;
-		};
 		BB96BE53297B1AC8003E1918 /* SwiftAudioEx */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BB96BE52297B1AC8003E1918 /* XCRemoteSwiftPackageReference "SwiftAudio" */;
 			productName = SwiftAudioEx;
 		};
-		BB96BF73297B2520003E1918 /* Adhan */ = {
+		BBA909892BB6FBF900E93328 /* Adhan */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BB96BE3B297B16AE003E1918 /* XCRemoteSwiftPackageReference "adhan-swift" */;
+			package = BBA909882BB6FBF900E93328 /* XCRemoteSwiftPackageReference "Adhan-Swift" */;
+			productName = Adhan;
+		};
+		BBA9098C2BB6FE3F00E93328 /* Adhan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBA909882BB6FBF900E93328 /* XCRemoteSwiftPackageReference "Adhan-Swift" */;
 			productName = Adhan;
 		};
 /* End XCSwiftPackageProductDependency section */

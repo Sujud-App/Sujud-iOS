@@ -68,14 +68,14 @@ struct PrayerWidgetEntryView : View {
     @State var next : String
     @State var method: CalculationMethod = .northAmerica {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Sujud")!.setValue(method.rawValue, forKey: "method")
+            UserDefaults(suiteName: "group.babyyoda777.Sujud-iOS")!.setValue(method.rawValue, forKey: "method")
             getPrayerTime()
         }
     }
    
     @State var mashab: Madhab = .hanafi {
         didSet {
-            UserDefaults(suiteName: "group.babyyoda777.Sujud")!.setValue(mashab.rawValue, forKey: "mashab")
+            UserDefaults(suiteName: "group.babyyoda777.Sujud-iOS")!.setValue(mashab.rawValue, forKey: "mashab")
             getPrayerTime()
         }
     }
@@ -99,11 +99,11 @@ struct PrayerWidgetEntryView : View {
         self.current = current
         self.next = next
         
-               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.string(forKey: "method") {
+               if let rawValue = UserDefaults(suiteName: "group.babyyoda777.Sujud-iOS")!.string(forKey: "method") {
                 self.method = CalculationMethod(rawValue: rawValue) ?? .northAmerica
                }
         
-        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Sujud")!.value(forKey: "mashab") {
+        if let mashab = UserDefaults(suiteName: "group.babyyoda777.Sujud-iOS")!.value(forKey: "mashab") {
             self.mashab = Madhab(rawValue: mashab as! Int) ?? .hanafi
         }
                                       
@@ -262,7 +262,7 @@ struct PrayerWidgetEntryView : View {
                         .offset(x: -10, y: -6)
                 }
                 .scaleEffect(0.5)
-                .offset(x: 15)
+                .offset(x: 150)
                 .padding(.top, -130)
                 VStack{
                     VStack{
@@ -357,7 +357,7 @@ struct PrayerWidgetEntryView : View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
+                .widgetBackground(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
                 .onAppear(perform: {
                     model.getPrayerTime(CLLocationManager(), didUpdateHeading: CLHeading.init())
                 })
@@ -472,7 +472,7 @@ struct PrayerWidgetEntryView : View {
             }
         }
             .frame(width: .infinity, height: .infinity, alignment: .trailing)
-            .background(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
+            .widgetBackground(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
         
         case .systemLarge:
             VStack{
@@ -644,7 +644,7 @@ struct PrayerWidgetEntryView : View {
             }
             .offset(y:-20)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
+            .widgetBackground(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
             .onAppear(perform: {
                 model.getPrayerTime(CLLocationManager(), didUpdateHeading: CLHeading.init())
             })
@@ -742,7 +742,7 @@ struct PrayerWidgetEntryView : View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
+            .widgetBackground(LinearGradient(gradient: Gradient(colors: [.init("GD2").opacity(0.6), .init("GD1")]), startPoint: .bottom, endPoint: .top))
             .onAppear(perform: {
                 model.getPrayerTime(CLLocationManager(), didUpdateHeading: CLHeading.init())
                 start()
@@ -763,6 +763,18 @@ struct PrayerWidget: Widget {
         }
         .configurationDisplayName("Prayer Times")
         .description("View daily and next prayer times right from your homescreen.")
+        .contentMarginsDisabled()
     }
 }
 
+extension View {
+    func widgetBackground(_ backgroundView: some View) -> some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            return containerBackground(for: .widget) {
+                backgroundView
+            }
+        } else {
+            return background(backgroundView)
+        }
+    }
+}
