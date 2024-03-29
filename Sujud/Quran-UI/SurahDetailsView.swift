@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import AVKit
+import AVFoundation
 
 struct SurahDetailsView: View {
+    @State private var isPlaying = false
+    @State private var playerer: AVPlayer? // Retain player as a property
     // MARK: - PROPERTIES
     let textAspect = 1.0
     
     @StateObject private var viewModel = ViewModel()
-    
     let detailCardWidth = 327.0 * UIScreen.main.bounds.width / 374.0
     let detailCardHeight = 257.0 * UIScreen.main.bounds.height / 812.0
     let detailRounded = 20.0 * UIScreen.main.bounds.height / 812.0
@@ -129,6 +132,21 @@ struct SurahDetailsView: View {
                         .onTapGesture {
                             viewModel.play(aye: aye.number)
                         }
+                    Button(action: {
+                        print("Play button tapped")
+
+                        if let surahID = surah?.id.tothree(){
+                            let urlString = "https://s3.amazonaws.com/qhive-recite-all/nak-translation/\(surahID)\(aye.number.tothree()).mp3"
+                            PlayAudio(url: urlString)
+                        } else {
+                            print("Error: Could not construct the URL")
+                        }
+
+                    }, label: {
+                        Text("play")
+                    })
+
+                    
                 }
                 .padding(.horizontal, 13.0)
             }
@@ -152,6 +170,8 @@ struct SurahDetailsView: View {
         .clipShape(RoundedRectangle(cornerRadius: ayatSectionHeaderBGRound))
         
     }
+
+
     
     @ViewBuilder
     func AyatView() -> some View {
@@ -165,3 +185,112 @@ struct SurahDetailsView: View {
         }
     }
 }
+
+extension Int {
+    func tothree() -> String {
+        return String(format: "%03d", self)
+    }
+}
+
+
+
+
+func PlayAudio(url: String) {
+    print("url")
+    if let videoURL = URL(string: url) {
+        print(videoURL)
+        let headers = [
+            "Accept": "*/*",
+            "Accept-Encoding": "identity",
+            "Accept-Language": "en-GB,en;q=0.9",
+            "Connection": "Keep-Alive",
+            "Host": "s3.amazonaws.com",
+            "Range": "bytes=0-1",
+            "Referer": "https://quranhive.com/",
+            "Sec-Fetch-Dest": "audio",
+            "Sec-Fetch-Mode": "no-cors",
+            "Sec-Fetch-Site": "cross-site",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15",
+            "X-Playback-Session-Id": "61639E40-ADAA-4398-B430-0F2DCA8DF529"
+        ]
+        let asset = AVURLAsset(url: videoURL, options: ["AVURLAssetHTTPHeaderFieldsKey": headers])
+        
+        let resourceLoaderDelegate = ResourceLoaderDelegate(headers: headers)
+        asset.resourceLoader.setDelegate(resourceLoaderDelegate, queue: DispatchQueue.main)
+        
+        let playerItem = AVPlayerItem(asset: asset)
+        let player = AVPlayer(playerItem: playerItem)
+        
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        playerViewController.allowsPictureInPicturePlayback = true
+        playerViewController.canStartPictureInPictureAutomaticallyFromInline = true
+        playerViewController.entersFullScreenWhenPlaybackBegins = true
+
+
+        if var topViewController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topViewController.presentedViewController {
+                topViewController = presentedViewController
+            }
+            
+            topViewController.present(playerViewController, animated: true) {
+                setupAudioSession()
+                player.play()
+            }
+        }
+        
+    } else {
+        print("Invalid video URL")
+    }
+}
+
+func setupAudioSession() {
+    let audioSession = AVAudioSession.sharedInstance()
+    do {
+        try audioSession.setCategory(.playback, mode: .moviePlayback)
+        try audioSession.setActive(true)
+    } catch {
+        print("Error setting up audio session: \(error.localizedDescription)")
+    }
+}
+
+
+class ResourceLoaderDelegate: NSObject, AVAssetResourceLoaderDelegate {
+    private let headers: [String: String]
+    
+    init(headers: [String: String] = [:]) {
+        self.headers = headers
+        super.init()
+    }
+    
+    func resourceLoader(_ resourceLoader: AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource loadingRequest: AVAssetResourceLoadingRequest) -> Bool {
+        guard let url = loadingRequest.request.url else {
+            loadingRequest.finishLoading(with: NSError(domain: "Invalid URL", code: -1, userInfo: nil))
+            return false
+        }
+        
+        var request = URLRequest(url: url)
+        headers.forEach { key, value in
+            request.addValue(value, forHTTPHeaderField: key)
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
+                loadingRequest.finishLoading(with: error)
+                return
+            }
+            
+            if response.statusCode == 200 {
+                loadingRequest.dataRequest?.respond(with: data)
+                loadingRequest.finishLoading()
+            } else {
+                loadingRequest.finishLoading(with: NSError(domain: "HTTP Error", code: response.statusCode, userInfo: nil))
+            }
+        }
+        task.resume()
+        
+        return true
+    }
+}
+
+
