@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import UIKit
 import AVFoundation
 
 struct SurahDetailsView: View {
@@ -132,21 +133,7 @@ struct SurahDetailsView: View {
                         .onTapGesture {
                             viewModel.play(aye: aye.number)
                         }
-                    Button(action: {
-                        print("Play button tapped")
 
-                        if let surahID = surah?.id.tothree(){
-                            let urlString = "https://s3.amazonaws.com/qhive-recite-all/nak-translation/\(surahID)\(aye.number.tothree()).mp3"
-                            PlayAudio(url: urlString)
-                        } else {
-                            print("Error: Could not construct the URL")
-                        }
-
-                    }, label: {
-                        Text("play")
-                    })
-
-                    
                 }
                 .padding(.horizontal, 13.0)
             }
@@ -161,9 +148,18 @@ struct SurahDetailsView: View {
                 .padding(10)
                 .background(.ultraThinMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: ayatSectionHeaderBGRound))
-            if (aye.number != surah?.aya_count) {
-                
+            if (surah?.id == 1) {
+                EmptyView()
+            }else{
+                HStack{
+                    Text("Tafseer by Nouman Ali Khan")
+                    Spacer()
+                    if let surahid = surah?.id.tothree(), let surahname = surah?.en_name {
+                        AudioButton(surah: surahid, ayah: aye.number.tothree(), tafseerItem: "\(surahname) - Ayah \(aye.number)", uniqueID: "\(surahid)\(aye.number)")
+                    }
+                }
             }
+ 
         }
         .padding(15)
         .background(.ultraThinMaterial)
@@ -192,13 +188,16 @@ extension Int {
     }
 }
 
+import AVFoundation
+import MediaPlayer
 
+var currentAudioPlayer: AVPlayer?
 
-
-func PlayAudio(url: String) {
-    print("url")
-    if let videoURL = URL(string: url) {
-        print(videoURL)
+func PlayAudio(surah: String, ayah: String, tafseeritem: String) {
+    
+    let urlString = "https://s3.amazonaws.com/qhive-recite-all/nak-translation/\(surah)\(ayah).mp3"
+    
+    if let audioURL = URL(string: urlString) {
         let headers = [
             "Accept": "*/*",
             "Accept-Encoding": "identity",
@@ -213,44 +212,132 @@ func PlayAudio(url: String) {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15",
             "X-Playback-Session-Id": "61639E40-ADAA-4398-B430-0F2DCA8DF529"
         ]
-        let asset = AVURLAsset(url: videoURL, options: ["AVURLAssetHTTPHeaderFieldsKey": headers])
-        
+        let asset = AVURLAsset(url: audioURL, options: ["AVURLAssetHTTPHeaderFieldsKey": headers])
+
         let resourceLoaderDelegate = ResourceLoaderDelegate(headers: headers)
         asset.resourceLoader.setDelegate(resourceLoaderDelegate, queue: DispatchQueue.main)
-        
+
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
-        
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        playerViewController.allowsPictureInPicturePlayback = true
-        playerViewController.canStartPictureInPictureAutomaticallyFromInline = true
-        playerViewController.entersFullScreenWhenPlaybackBegins = true
 
+        let progressView = AudioProgressView(frame: CGRect(x: 0, y: 0, width: 300, height: 20))
+        progressView.player = player
 
-        if var topViewController = UIApplication.shared.keyWindow?.rootViewController {
-            while let presentedViewController = topViewController.presentedViewController {
-                topViewController = presentedViewController
+        if let topViewController = UIApplication.shared.keyWindow?.rootViewController {
+            // Remove the previous audio player, if any
+            currentAudioPlayer?.replaceCurrentItem(with: nil)
+
+            // Set up remote control
+            setupRemoteTransportControls(player: player)
+            setupNowPlayingInfoCenter(player: player, url: audioURL, tafseeritem: tafseeritem)
+
+            // Configure audio session to allow playback in the background
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback, options: .allowAirPlay)
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch {
+                print("Failed to configure audio session:", error)
             }
-            
-            topViewController.present(playerViewController, animated: true) {
-                setupAudioSession()
-                player.play()
-            }
+
+            // Start playback
+            player.play()
+
+            // Update the current audio player reference
+            currentAudioPlayer = player
         }
-        
     } else {
-        print("Invalid video URL")
+        print("Invalid audio URL")
     }
 }
 
-func setupAudioSession() {
-    let audioSession = AVAudioSession.sharedInstance()
-    do {
-        try audioSession.setCategory(.playback, mode: .moviePlayback)
-        try audioSession.setActive(true)
-    } catch {
-        print("Error setting up audio session: \(error.localizedDescription)")
+
+func setupRemoteTransportControls(player: AVPlayer) {
+    let commandCenter = MPRemoteCommandCenter.shared()
+
+    commandCenter.playCommand.addTarget { event in
+        if player.rate == 0.0 {
+            player.play()
+            return .success
+        }
+        return .commandFailed
+    }
+
+    commandCenter.pauseCommand.addTarget { event in
+        if player.rate == 1.0 {
+            player.pause()
+            return .success
+        }
+        return .commandFailed
+    }
+
+    commandCenter.skipBackwardCommand.addTarget { event in
+        let skipInterval: Double = 10 // Skip back 10 seconds
+        let currentTime = player.currentTime().seconds
+        let newTime = max(currentTime - skipInterval, 0)
+        player.seek(to: CMTime(seconds: newTime, preferredTimescale: 1))
+        return .success
+    }
+
+    commandCenter.skipForwardCommand.addTarget { event in
+        let skipInterval: Double = 10 // Skip forward 10 seconds
+        let currentTime = player.currentTime().seconds
+        let duration = player.currentItem?.duration.seconds ?? 0
+        let newTime = min(currentTime + skipInterval, duration)
+        player.seek(to: CMTime(seconds: newTime, preferredTimescale: 1))
+        return .success
+    }
+}
+
+func setupNowPlayingInfoCenter(player: AVPlayer, url: URL, tafseeritem: String) {
+
+    player.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 1), queue: DispatchQueue.main) { [weak player] time in
+        guard let player = player else { return }
+        guard let duration = player.currentItem?.duration else { return }
+
+        let currentTime = CMTimeGetSeconds(time)
+        let totalDuration = CMTimeGetSeconds(duration)
+
+        let nowPlayingInfo: [String: Any] = [
+            MPMediaItemPropertyTitle: tafseeritem,
+            MPMediaItemPropertyArtist: "Nouman Ali Khan",
+            MPMediaItemPropertyPlaybackDuration: totalDuration,
+            MPNowPlayingInfoPropertyElapsedPlaybackTime: currentTime
+        ]
+
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
+}
+
+class AudioProgressView: UIProgressView {
+    var player: AVPlayer?
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.progress = 0
+        self.observedTime()
+    }
+
+    private func observedTime() {
+        player?.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 1), queue: DispatchQueue.main) { [weak self] time in
+            guard let self = self else { return }
+            guard let player = self.player else { return }
+            guard let duration = player.currentItem?.duration else { return }
+
+            let currentTime = CMTimeGetSeconds(time)
+            let totalDuration = CMTimeGetSeconds(duration)
+
+            let progress = Float(currentTime / totalDuration)
+            self.setProgress(progress, animated: true)
+        }
     }
 }
 
@@ -293,4 +380,49 @@ class ResourceLoaderDelegate: NSObject, AVAssetResourceLoaderDelegate {
     }
 }
 
+import SwiftUI
 
+struct AudioButton: View {
+    var surah: String
+    var ayah: String
+    var tafseerItem: String
+    var uniqueID: String // Unique identifier for the item in the list
+    
+    @State private var isPlaying = false
+    
+    var body: some View {
+        Button(action: {
+            if self.isPlaying {
+                // Pause audio
+                self.pauseAudio()
+            } else {
+                // Play audio
+                self.playAudio()
+            }
+        }) {
+            Image(systemName: self.isPlaying ? "pause.fill" : "play.fill")
+                .font(.title)
+                .foregroundColor(.blue)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime)) { _ in
+            self.isPlaying = false
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemFailedToPlayToEndTime)) { _ in
+            self.isPlaying = false
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemPlaybackStalled)) { _ in
+            self.isPlaying = false
+        }
+    }
+    
+    func playAudio() {
+        PlayAudio(surah: surah, ayah: ayah, tafseeritem: tafseerItem)
+        self.isPlaying = true
+    }
+    
+    func pauseAudio() {
+        // Pause logic here if needed
+        currentAudioPlayer?.pause()
+        self.isPlaying = false
+    }
+}

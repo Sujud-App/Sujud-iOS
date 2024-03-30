@@ -22,6 +22,7 @@ struct SurahItem: Codable, Hashable, Identifiable {
     let the_letter: Int
     let juz: String
     let page: String
+
 }
 
 func loadSurahs() -> [SurahItem] {
